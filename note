@@ -11,11 +11,12 @@ Commenting
         multi line comment */
 
 Data types
+    undefined -> something that hasn't been defined
+    null -> nothing
+    boolean -> true or false
+    symbol -> unique/unimmutable
+    string -> any sort of texts
+    number -> numbers
+    object -> store different value pairs
 
-undefined - something that hasn't been defined
-null
-boolean
-string - any sort of texts
-number
-symbol
-object
+
