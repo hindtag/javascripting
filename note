@@ -1,0 +1,21 @@
+All web browser can run javascript
+Console log then check it on console in the browser by pressing f12
+
+Commenting
+    // in-line comment
+    /*  multi line comment
+        multi line comment
+        multi line comment
+        multi line comment
+        multi line comment
+        multi line comment */
+
+Data types
+
+undefined - something that hasn't been defined
+null
+boolean
+string - any sort of texts
+number
+symbol
+object
