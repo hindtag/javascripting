@@ -48,7 +48,7 @@
     // myVar--
     // myAge--
 
-// * String
+    // * String
 
 // // Declaring String Variable
 //     var firstName = "Mark";
@@ -102,7 +102,7 @@
         // myStr += someAdjective;
         // console.log(myStr);
 
-// Find the length of String
+// Find the length of String / Count the character
     // Example:
         // var firstNameLength = 0;
         // var firstName = "Ada";
@@ -117,6 +117,28 @@
 
         // console.log(lastNameLength);
 
-    continue on 32:00
-    reference:
-    https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3678s
+// Find the first character using bracket notation
+    // Example: 
+    // var firstLetterOfFirstName = "";
+    // var firstName = "Ada";
+
+    // firstLetterOfFirstName = firstName[0]; // Way to get a character at a specific index
+
+    // Example set up:
+    // var firstLetterOfLastName = "";
+    // var lastName = "Lovelace";
+
+    // firstLetterOfLastName = lastName[1]; // Way to get the "o" character at the beginning of the word "Lovelace"
+    // console.log(firstLetterOfLastName);
+
+// String immutability or they cannot be altered once created.
+    // Example:
+    var myStr = "Jelly World";
+    // Example set up
+    myStr[0] = "H"; // This will not have an effect
+    myStr = "Hello world"; // This will have an effect
+    console.log(myStr);
+
+    // continue on ""
+    // reference:
+    // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3678s
