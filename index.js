@@ -104,15 +104,19 @@
 
 // Find the length of String
     // Example:
-        var firstNameLength = 0;
-        var firstName = "Ada";
+        // var firstNameLength = 0;
+        // var firstName = "Ada";
 
-        firstNameLength = firstName.length;
-        console.log(firstNameLength);
+        // firstNameLength = firstName.length;
+        // console.log(firstNameLength);
 
-        var lastNameLength = 0;
-        var lastName = "Lovelace";
+        // var lastNameLength = 0;
+        // var lastName = "Lovelace";
 
-        lastNameLength= lastName.length;
+        // lastNameLength= lastName.length;
 
-        console.log(lastNameLength);
+        // console.log(lastNameLength);
+
+    continue on 32:00
+    reference:
+    https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3678s
