@@ -128,16 +128,68 @@
     // var firstLetterOfLastName = "";
     // var lastName = "Lovelace";
 
-    // firstLetterOfLastName = lastName[1]; // Way to get the "o" character at the beginning of the word "Lovelace"
+    // firstLetterOfLastName = lastName[0]; // Way to get the "L" character at the beginning of the word "Lovelace"
     // console.log(firstLetterOfLastName);
 
 // String immutability or they cannot be altered once created.
-    // Example:
-    var myStr = "Jelly World";
-    // Example set up
-    myStr[0] = "H"; // This will not have an effect
-    myStr = "Hello world"; // This will have an effect
-    console.log(myStr);
+    // // Example:
+    // var myStr = "Jelly World";
+    // // Example set up
+    // myStr[0] = "H"; // This will not have an effect
+    // myStr = "Hello world"; // This will have an effect
+    // console.log(myStr);
+
+// // Bracket notation to find the Nth character
+//     // Example:
+//     var firstName = "Ada";
+//     var secondLetterOfFirstName = firstName[1];
+
+//     // Set up
+//     var lastName = "Lovelace";
+
+//     // Only change code below this line.
+//     var thirdLetterOfLastName = lastName;
+    
+// // Bracket notation to find the last character in String
+//     // Example:
+//     var firstName = "Adidas";
+//     var lastLetterOfFirstName = firstName[firstName.length -1]; // This will have an output of "s"
+//     console.log(lastLetterOfFirstName);
+
+//     // Set up
+//     var lastName = "Lovelace";
+
+//     // Only change code below this line.
+//     var lastLetterOfLastName = lastName[lastName.length -1];
+//     console.log(lastLetterOfLastName);
+
+// // Bracket notation to find the Nth-to-last character in String
+//     // Example:
+//     var firstName = "Adidas";
+//     var thirdToLastLetterOfFirstName = firstName[firstName.length -3]; // This will have an output of "d"
+//     console.log(thirdToLastLetterOfFirstName);
+
+//     // Set up
+//     var lastName = "Lovelace";
+
+//     // Only change code below this line.
+//     var thirdToLastLetterOfLastName = lastName[lastName.length -3];
+//     console.log(thirdToLastLetterOfLastName);
+
+// // Word blanks or mad libs
+//     // Example:
+//     function wordBlanks(myNoun, myAdjective, myVerb, myAdverb){
+//         // Your code below this line
+//             var result = "";
+//             result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+
+//         // Your code above this line
+//             return result;
+//         }
+         
+//         // Change the words here to test your function
+//         console.log(wordBlanks("dog", "small", "ran", "quickly")); 
+//         console.log(wordBlanks("cat", "black", "climb", "quickly")); 
 
     // continue on ""
     // reference:
