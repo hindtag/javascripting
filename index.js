@@ -176,20 +176,32 @@
 //     var thirdToLastLetterOfLastName = lastName[lastName.length -3];
 //     console.log(thirdToLastLetterOfLastName);
 
-// // Word blanks or mad libs
-//     // Example:
-//     function wordBlanks(myNoun, myAdjective, myVerb, myAdverb){
-//         // Your code below this line
-//             var result = "";
-//             result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+// Word blanks or mad libs passsing different words
+    // Example:
+    function wordBlanks(myNoun, myAdjective, myVerb, myAdverb){
+        // Your code below this line
+            var result = "";
+            result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
 
-//         // Your code above this line
-//             return result;
-//         }
+        // Your code above this line
+            return result;
+        }
          
-//         // Change the words here to test your function
-//         console.log(wordBlanks("dog", "small", "ran", "quickly")); 
-//         console.log(wordBlanks("cat", "black", "climb", "quickly")); 
+        // Change the words here to test your function
+        console.log(wordBlanks("dog", "small", "ran", "quickly")); 
+        console.log(wordBlanks("cat", "black", "climb", "quickly")); 
+
+
+// Store multiple values with arrays
+    // Arrays allow you to store several pieces of data in one place.
+
+    // Example
+        var ourArray = ["John", 23];
+
+    // Only change code below this line.
+        var myArray = ["Biron", 33];
+        
+
 
     // continue on "40:44"
     // reference:

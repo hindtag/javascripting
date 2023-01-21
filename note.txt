@@ -1,6 +1,11 @@
 All web browser can run javascript
 Console log to see the program then check it on console in the browser by pressing f12
 
+The main distinction with function is using ();
+    Example:
+        function wordBlanks(myNoun, myAdjective, myVerb, myAdverb);
+
+
 Commenting
     // in-line comment
     /*  multi line comment
@@ -225,3 +230,13 @@ Variable
             Change the words here to test your function
                 console.log(wordBlanks("dog", "small", "ran", "quickly")); 
                 console.log(wordBlanks("cat", "black", "climb", "quickly")); 
+
+    Store multiple values with arrays
+        Arrays allow you to store several pieces of data in one place.
+
+        Example:
+            var ourArray = ["John", 23];
+
+        Only change code below this line.
+            var myArray = ["Biron", 33];
+        
