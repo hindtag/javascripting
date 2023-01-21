@@ -176,33 +176,152 @@
 //     var thirdToLastLetterOfLastName = lastName[lastName.length -3];
 //     console.log(thirdToLastLetterOfLastName);
 
-// Word blanks or mad libs passsing different words
-    // Example:
-    function wordBlanks(myNoun, myAdjective, myVerb, myAdverb){
-        // Your code below this line
-            var result = "";
-            result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+// // Word blanks or mad libs passsing different words
+//     // Example:
+//     function wordBlanks(myNoun, myAdjective, myVerb, myAdverb){
+//         // Your code below this line
+//             var result = "";
+//             result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
 
-        // Your code above this line
-            return result;
-        }
+//         // Your code above this line
+//             return result;
+//         }
          
-        // Change the words here to test your function
-        console.log(wordBlanks("dog", "small", "ran", "quickly")); 
-        console.log(wordBlanks("cat", "black", "climb", "quickly")); 
+//         // Change the words here to test your function
+//         console.log(wordBlanks("dog", "small", "ran", "quickly")); 
+//         console.log(wordBlanks("cat", "black", "climb", "quickly")); 
+
+// // Store multiple values with arrays
+//     // Arrays allow you to store several pieces of data in one place.
+
+//     // Example
+//         var ourArray = ["John", 23];
+
+//     // Only change code below this line.
+//         var myArray = ["Biron", 33];
+
+// // Nested array
+//     // When one of the elements in an array is another array.
+    
+//     // Example
+//     var ourArray = [["The universe", 33], ["Everything", 101010], ["Philippines", 57]];
+
+//     // Only change code below this line.        
+//     var myArray = [["Mark", 33], ["sirtag", 1]];
+
+// // Access Array data with indexes
+    
+//     // Example
+//     var ourArray = [50,60,70];
+//     var ourData = ourArray[0]; // equals 50
+//     console.log(ourData);
+
+// // Modify array data with indexes
+//     // Example:
+//         var ourArray = [11,65,79];
+//         ourArray[1] = 45; // ourArray now equals [11,45,99]
+//         console.log(ourArray);
+
+//     // Another example:
+//         var myBirthday = [11,16,1988];
+//         myBirthday[2] = 1989;
+//         console.log(myBirthday); // myBirthday is now [11,16,1989]
+
+// // Access nested array with indexes
+//     // Example:
+    //     var myArray = [[1,2,3], [4,5,6], [7,8,9], [10,11,12], 13, 14];
+    //     var myData = myArray[1][2]; // This is 6
+    //     console.log(myData);
+
+//     // Another Example
+    //     var ourArray = [[11,12,13], [14,15,16], [17,18,19], [20,21,22], 23, 24];
+    //     var ourData = ourArray[1][2]; // This is 16
+    //     console.log(ourData);
+
+// Manipulate arrays with push()
+    // // Example:
+    //     var ourArray = ["Stimpson", "J", "Cat"];
+    //     ourArray.push(["happy", "joy"]);
+    //     // ourArray now equals ["Stimpson", "J", "Cat", ["happy", "joy"]]
+    //     console.log(ourArray);
+
+    // // Another Example
+    //     var myArray = ["Mark", "Biron", "Vargas"];
+    //     myArray.push(["Tag"]);
+    //     // myArray now equals ["Mark", "Biron", "Vargas", ["Tag"])]
+    //     console.log(myArray);
+
+// Manipulate arrays with pop()
+    // This will remove the last element
+    // /* Example: */
+    //     var ourArray = [1,2,3];
+    //     var removedFromOurArray = ourArray.pop();
+    //     // removedFromOurArray now equals 3, ourArray equals [1,2]
+    //     console.log(ourArray);
+
+    // /* Another Example: */
+    //     var myArray = [["Johny", 23], ["Bravo", ]];
+    //     var removedFromMyArray = myArray.pop();
+    //     // removedFromMyArray now equals 3, myArray equals ["Johny", 23]
+    //     console.log(myArray);
+
+    // /* Another Example: */
+    //     var thisArray = [[16, "sirtag"], ["Biron", "vargas"]];
+    //     var removedFromthisArray = thisArray.pop();
+    //     // removedFromthisArray now equals "Biron", "vargas", thisArray equals [16, "sirtag"]
+    //     console.log(thisArray);
+
+// // Manipulate arrays with shift()
+//     // This will remove the first element
+//     /* Example: */
+//     var myArray = ["Mark", "V", ["sirtag"]];
+//     var removedFromMyArray = myArray.shift();
+//     // removedFromMyArray now equals "Mark", myArray equals ["V", ["sirtag"]]
+//     console.log(myArray);
+
+//     /* Another Example: */
+//     var thisArray = [[16, "sirtag"], "Biron", [33]];
+//     var removedFromthisArray = thisArray.shift();
+//     // removedFromthisArray now equals [16, "sirtag"], thisArray equals "Biron", [33]
+//     console.log(thisArray);
+//     console.log(removedFromthisArray);
+
+// // Manipulate arrays with unshift() 
+//     // This is similar to the push function but add at the beginning
+//     /* Example: */
+//     var myArray = ["Mark", "V", "sirtag"];
+//     myArray.shift(); // myArray equals ["V", "sirtag"]
+//     myArray.unshift("Happy Biron");
+//     console.log(myArray); // ["Happy Biron", "V", "sirtag"];
+
+//     /* Another Example: */
+//     var thisArray = ["Gray", "Blue", "black"];
+//     thisArray.shift(); // thisArray equals ["is", "black"]
+//     thisArray.unshift("Keyboard is");
+//     console.log(thisArray); // ["Gray is", "blue", "black"];
+
+// Shopping List
+    /* Example */
+        var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]];
+
+//Function -> Allows us to create reusable code
+    
+    /* Setup: */
+    function ourReusableFunction(){
+        console.log("Heyya, World"); // Iside the {curly bracket is run and invoked}
+    }
+
+    ourReusableFunction();
+
+    / * Another example: */
+
+    function functionName(){
+        console.log("Hello, dude");
+    }
+
+    functionName();
 
 
-// Store multiple values with arrays
-    // Arrays allow you to store several pieces of data in one place.
-
-    // Example
-        var ourArray = ["John", 23];
-
-    // Only change code below this line.
-        var myArray = ["Biron", 33];
-        
-
-
-    // continue on "40:44"
+    // continue on ""
     // reference:
     // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3678s
