@@ -468,18 +468,173 @@
         // -> Que is an abstract data structure that items are kept in order.
         // -> New items can be added to the back of the cue and old items are taken off from the front of the cue.
         
-        /* Example: */
-            function nextInLine(arr, item){
-                arr.push(item); // to add the 6 on the end of the array
-                return arr.shift(item); // shift removes the first item and returns the first item
-            }
+        // /* Example: */
+        //     function nextInLine(arr, item){
+        //         arr.push(item); // to add the 6 on the end of the array
+        //         return arr.shift(item); // shift removes the first item and returns the first item
+        //     }
 
-            var testArr = [1,2,3,4,5];
+        //     var testArr = [1,2,3,4,5];
 
-            console.log("Before: " + JSON.stringify(testArr)); // stringify is used to change an array into a string.
-            console.log("First in que is " + nextInLine(testArr, 6));
-            console.log("After: " + JSON.stringify(testArr));
+        //     console.log("Before: " + JSON.stringify(testArr)); // stringify is used to change an array into a string.
+        //     console.log("First in que is " + nextInLine(testArr, 6));
+        //     console.log("After: " + JSON.stringify(testArr));
 
-    // continue on ""
+    // Boolean Values
+        // -> There are only two values which are true or false.
+
+        // /* Example */
+
+        //     function welcomeToBooleans(){
+
+        //         return false;
+        //     }
+
+    // Use Conditional logic with If statements
+        // -> Use to make decisions in code using keyword if.
+        // /* Example: */
+
+        //     function ourTrueOrFalse(isItTrue){
+        //         if (isItTrue){
+        //             return "Yes, it's true";
+        //         }
+        //             return "No, it's false";               
+        //     }
+                
+        //     function TrueOrFalse(wasThatTrue){
+        //         if (wasThatTrue){
+        //             return "True, that was true";
+        //         }
+        //             return "False, that was false";
+
+        //     }
+
+        //     console.log(ourTrueOrFalse(false));
+        //     console.log(TrueOrFalse(true));
+
+    // Comparision with equality operator
+        // -> Using == to check if the condition is met.
+        // /* Example: We want to check if the val is equal to 12*/
+
+        // function testEqual(val){
+        //     if (val == 12){
+        //         return "Equal";
+        //     }
+        //         return "Not equal";
+        // }
+
+        // console.log(testEqual(10));
+        // console.log(testEqual(12));
+
+    // Comparison with the strict equality operator
+        // -> Using === to evaluate if it is true or false.
+        // /* Example: 
+        // 3 === 3
+        // 3 === '3'
+        // */
+
+        // function testStrict(val){
+        //     if (val === 12){
+        //         return "Equal";
+        //     }
+        //         return "Not equal";
+        // }
+
+        // console.log(testStrict(10));
+        // console.log(testStrict(12));
+        // console.log(testStrict("tag"));
+        // console.log(testStrict("12"));
+
+        // // Another example:
+        // function strictEquality(a,b){
+        //     if (a === b){
+        //         return "Equal";
+        //     }
+        //         return "Not equal";
+        // }
+
+        // console.log("The answer is " + " " + strictEquality(10, "10"));
+        // console.log("The answer is " + " " + strictEquality(10, 10));
+
+    // Comparison with not equal operator
+        // Using !=
+        // /* Example */
+        // function testNotEqual(val){
+        //     if (val != 99){
+        //         return "Not equal";
+        //     }
+        //         return "equal";
+        // }
+
+        // console.log(testNotEqual(10));
+
+     // Comparison with the strict inequality operator
+        // -> Using !== to evaluate if it is true or false.
+        // /* Example: */
+
+        // function testStrict(val){
+        //     if (val !== 12){
+        //         return "Not equal";
+        //     }
+        //         return "qual";
+        // }
+
+        // console.log(testStrict(10));
+        // console.log(testStrict(12));
+        // console.log(testStrict("tag"));
+        // console.log(testStrict("12"));
+
+        // // Another example:
+        // function strictEquality(a,b){
+        //     if (a !== b){
+        //         return "Not Equal";
+        //     }
+        //         return "equal";
+        // }
+
+        // console.log("The answer is " + " " + strictEquality(10, "10"));
+        // console.log("The answer is " + " " + strictEquality(10, 10));
+
+    // Comparison with the logical and operator
+        // -> Using !== to evaluate if it is true or false.
+        // /* Example: */
+
+        //     function testGreaterThan(val){
+        //         if (val > 100){
+        //             return "Over 100";
+        //         }
+
+        //         if (val > 10 ){
+        //             return "Over 10";
+        //         }
+
+        //         return "10 or under";
+        //     }
+
+        //     console.log(testGreaterThan(200));
+        //     console.log(testGreaterThan(30));
+        //     console.log(testGreaterThan(10));
+
+    // Comparison with greater than or equal to
+        // -> Using >= symbols
+        // /* Example: */
+
+        // function testGreaterThan(val){
+        //     if (val >= 100){
+        //         return "20 over";
+        //     }
+
+        //     if (val >= 10 ){
+        //         return "10 or over ";
+        //     }
+
+        //     return "Less than 10";
+        // }
+
+        // console.log(testGreaterThan(200));
+        // console.log(testGreaterThan(30));
+        // console.log(testGreaterThan(9));
+
+    // continue on "1:19:00"
     // reference:
     // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3678s
