@@ -302,25 +302,183 @@
 
 // Shopping List
     /* Example */
-        var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]];
+        // var myList = [["cereal", 3], ["milk", 2], ["bananas", 3], ["juice", 2], ["eggs", 12]];
 
 //Function -> Allows us to create reusable code
     
     /* Setup: */
-    function ourReusableFunction(){
-        console.log("Heyya, World"); // Iside the {curly bracket is run and invoked}
-    }
+            // function ourReusableFunction(){
+            //     console.log("Heyya, World"); // Iside the {curly bracket is run and invoked}
+            // }
 
-    ourReusableFunction();
+            // ourReusableFunction();
 
-    / * Another example: */
+            // / * Another example: */
 
-    function functionName(){
-        console.log("Hello, dude");
-    }
+            // function functionName(){
+            //     console.log("Hello, dude");
+            // }
 
-    functionName();
+            // functionName();
 
+    // # Passing values to functions with arguments
+    // Parameters are variables that act as place holders for values that are to be input to a function when it is called.
+    
+        // /* Example: a and b are*/
+        //     function ourFunctionName(a,b){
+        //         console.log(a-b);
+        //     }
+
+        //     ourFunctionName(10,5); // Output is 5
+
+        // /* Another Example: */
+        //     function thisFunctionName(quantiry,boxes){
+        //         console.log(quantiry + boxes);
+        //     }
+
+        //     thisFunctionName(1,3); // Output is 4
+
+    // # Global Scope and functions
+        // -> Scope refers to the visibility of the variables
+        // -> Variables that are defined outside of a function block have global Scope
+
+        // /* Example using global without var on function */
+        // var myGlobal = 10; // Declare the variable here for global variable
+        
+        // function fun1(){ // assign parameteres inside ()
+        //     oopsGlobal = 5; // Declare function statements inside for local/function variable {}
+        // }
+
+        // // Only change code above this line
+        // function fun2(){
+        //     var output ="";
+        //     if (typeof myGlobal != "undefined"){
+        //         output += "myGlobal: " + myGlobal;
+        //     }
+        //     if (typeof oopsGlobal != "undefined"){
+        //         output += " " + "oopsGlobal " + oopsGlobal;
+        //     }
+        //     console.log(output);
+        // }
+
+        // fun1();
+        // fun2();
+
+        // /* Example using local with var */
+        // var thisGlobal = 10; // Declare the variable here for global variable
+        
+        // function fun3(){ // assign parameteres inside ()
+        //     var beLocal = 5; // Declare function statements inside for local/function variable {}
+        // }
+
+        // function fun4(){
+        //     var output ="";
+        //     if (typeof thisGlobal != "undefined"){
+        //         output += "myGlobal: " + thisGlobal;
+        //     }
+        //     if (typeof beLocal != "undefined"){
+        //         output += " " + "beLocal " + beLocal;
+        //     }
+        //     console.log(output);
+        // }
+
+        // fun3();
+        // fun4();
+        
+    // Local Scope and function
+        // Variables which are declared within a function
+        
+        // /* Example: */
+
+        // function myLocalScope(){
+        //     var myVar = 5; // Example declaring variable here makes it visible inside the function only
+        //     console.log(myVar); 
+        // }
+
+        // myLocalScope(); // this will spit the variable equals to 5
+        // console.log(myVar); // this is glocal and can't access myVar, since it is local function.
+
+    /* Note: It is posible to have both local and global variables with the same name. */
+        // // Example:
+        //  var outerWear = "T-Shirt"; // Assign/Declare variable
+         
+        //  function myOutfit(){ // Create function
+        //     var outerWear = "Sweeter" // This is local
+        //     return outerWear; // This is global
+        //  }
+
+        //  console.log(myOutfit()); // Equals Sweater
+        //  console.log(outerWear); // Equals T-shirt
+
+    // Return a value from a function with Return
+        /* Example: */
+
+        // function minusSeven(num){
+        //     return num - 7;
+        // }
+
+        // console.log(minusSeven(10)); // Equals 3
+
+        // /* Another example */
+
+        // function functionName(number){
+        //     return number + 2;
+        // }
+
+        // console.log(functionName(2)); // Equals 4
+
+    // Understanding undefined value returned from a function
+        // -> Functions does not always have a return statements
+        // /* Example: */
+        //     var sum = 0;
+
+        //     function addThree(){
+        //         sum = sum + 3;
+        //     }
+
+        // // Another Example:
+        //     function addFive(){
+        //         sum += 5;
+        //     }
+        //     console.log(addThree);
+        //     console.log(addFive);
+
+    // Assignment with a returned value
+        // /* Example: */
+        //     var changed = 0;
+
+        //     function change(num){
+        //         return (num + 5) /3;
+        //     }
+
+        //     changed = change(10);
+
+        // // Another example
+        //     var processed = 0;
+
+        //     function processArg(num){
+        //         return (num + 3) /5;
+        //     }
+
+        //     processed = processArg(50);
+        //     console.log(changed);
+        //     console.log(processed);
+
+    // Stand in line
+        // -> Que is an abstract data structure that items are kept in order.
+        // -> New items can be added to the back of the cue and old items are taken off from the front of the cue.
+        
+        /* Example: */
+            function nextInLine(arr, item){
+                arr.push(item); // to add the 6 on the end of the array
+                return arr.shift(item); // shift removes the first item and returns the first item
+            }
+
+            var testArr = [1,2,3,4,5];
+
+            console.log("Before: " + JSON.stringify(testArr)); // stringify is used to change an array into a string.
+            console.log("First in que is " + nextInLine(testArr, 6));
+            console.log("After: " + JSON.stringify(testArr));
 
     // continue on ""
     // reference:
