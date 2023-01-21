@@ -191,6 +191,6 @@
 //         console.log(wordBlanks("dog", "small", "ran", "quickly")); 
 //         console.log(wordBlanks("cat", "black", "climb", "quickly")); 
 
-    // continue on ""
+    // continue on "40:44"
     // reference:
     // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3678s
