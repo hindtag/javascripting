@@ -653,7 +653,7 @@
 
         // console.log(testLessThan(40));
 
-        // Comparison with less than or equal to
+    // Comparison with less than or equal to
         // -> Using <= symbols
         // /* Example: */
 
@@ -684,7 +684,7 @@
 
             // console.log(testLogicalAnd(10));
         
-        // Comparisons with the logical Or operator
+    // Comparisons with the logical Or operator
         // -> Using || to check.
             // // /* Example: */
 
@@ -721,22 +721,241 @@
 
         // Else if statements
         // -> For multiple conditions that need to be addressed.
-        /* Example */
+        // /* Example */
             
-            function testElseIf(val){
-                if (val > 10){
-                    return "Greater than 10";
-                } else if (val < 5){
-                    return "Smaller than 5";
-                } else {
-                    return "Between 5 and 10";
+        //     function testElseIf(val){
+        //         if (val > 10){
+        //             return "Greater than 10";
+        //         } else if (val < 5){
+        //             return "Smaller than 5";
+        //         } else {
+        //             return "Between 5 and 10";
+        //         }
+        //     }
+
+        //     console.log(testElseIf(100));
+        
+
+        // Logical order in if else statements
+        // -> Making sure that your logic is in the correct chronological order
+            // /* Example: */
+
+            // function orderMyLogic (val){
+            //     if (val < 10){
+            //         return "Less than 10"; // This is in wrong order
+            //     } else if (val < 5){
+            //         return "Less than 5"; // This is in wrong order
+            //     } else {
+            //         return "Greater than or equal to 10";
+            //     }
+            // }
+
+            // console.log(orderMyLogic(1));
+
+            // // Correcting
+
+            // function orderMyLogic (val){
+            //     if (val < 5){
+            //         return "Less than 5"; // This is the correct order
+            //     } else if (val < 10){
+            //         return "Less than 10"; // This is the correct order
+            //     } else {
+            //         return "Greater than or equal to 10";
+            //     }
+            // }
+
+            // console.log(orderMyLogic(1));
+
+        
+        // Chaining If else statements
+        // -> This is a coding challenge
+            /*
+            num < 5 - return "tiny"
+            num < 10 - return "Small"
+            num < 15 - return "Medium"
+            num < 20 - return "Large"
+            num >- return "Huge"
+            */
+            // /* Example: */
+
+            // function testSize(num){
+            // if (num < 5){
+            //         return "Tiny"
+            //     } else if (num < 10){
+            //         return "Small"
+            //     } else if (num < 15){
+            //         return "Medium"
+            //     } else if (num < 20){
+            //         return "Large"
+            //     } else{
+            //         return "Huge"
+            //     }
+            // }
+
+            // console.log(testSize(19));
+
+        //-> This is a coding challenge Golf Code
+            /*
+            Strokes   Return
+            1           "Hole-in-one!" 
+            <= par -2   "Eagle"
+            par - 1     "Birdie"
+            par         "Par"
+            par + 1     "Bogey"
+            par + 2     "Double Bogey"
+            >= par + 3  "Go Home!"
+            */
+
+            // var names = ["Hole-in-one!","Eagle","Birdie","Par","Bogey","Double Bogey","Go Home!"];
+            // function goldScore(par, strokes){
+            //     if (strokes == 1){
+            //         return names[0]
+            //     } else if (strokes <= par - 2 ){
+            //         return names[1]
+            //     } else if (strokes == par - 1){
+            //         return names[2]
+            //     } else if (strokes == par ){
+            //         return names[3]
+            //     } else if (strokes == par + 1){
+            //         return names[4]
+            //     } else if (strokes == par + 2 ){
+            //         return names[5]
+            //     } else if (strokes >= par + 3 ){
+            //     return names[6]
+            //     }
+            // return "Change me";
+            // }
+
+            // console.log(goldScore(5,4));
+
+    
+    // Switch statements
+        /* -> Tests a value and can have many case statements which define various possible values.
+            -> Use this instead of chained else if
+            -> Switch functions starts with the word switch and use case instead of if.
+            -> don't forget to use break to end the case statements.
+            -> Notable difference is not using ; after the ""
+                Example answer = "tag";
+        */
+            // /* Example
+            // Write a switch statement which tests val and sets answer for the following conditions:
+            // 1 - "alpha"
+            // 2 - "beta"
+            // 3 - "gamma"
+            // 4 - "delta"
+            // */
+
+            //     function caseInSwitch(val){
+            //     var answer = "";
+                
+            //     switch(val){
+            //         case 1:
+            //             answer = "alpha"
+            //             break;
+            //         case 2:
+            //             answer = "beta"
+            //             break;
+            //         case 3:
+            //             answer = "gamma"
+            //             break;
+            //         case 4:
+            //             answer = "delta"
+            //             break;
+            //     }
+            //     return answer;
+            //     }    
+
+            //     console.log(caseInSwitch(4));
+
+        // Using default option
+        // // Example
+        //     function switchOfStuf(val){
+        //     var answer = "";
+            
+        //     switch(val){
+        //         case "a":
+        //             answer = "apple"
+        //             break;
+        //         case "b":
+        //             answer = "bird"
+        //             break;
+        //         case "c":
+        //             answer = "cat"
+        //             break;
+        //         default: // like an else statement
+        //             answer = "stuff"
+        //             break;
+        //     }
+        //     return answer;
+        //     }    
+
+        //     console.log(switchOfStuf("c"));
+        
+
+        // Multi Identical Options in switch statements
+        // -> Multiple inputs that give the same outputs
+            // /* Example: */
+            // function sequentialSize(val){
+            //     var answer = "";
+
+            //     switch (val) {
+            //         case 1:
+            //         case 2:
+            //         case 3:   
+            //             answer = "Low"
+            //             break;
+            //         case 4:
+            //         case 5:
+            //         case 6:   
+            //             answer = "Medium"
+            //             break;
+            //         case 7:
+            //         case 8:
+            //         case 9:   
+            //             answer = "High"
+            //             break;
+            //         default:
+            //             answer = "Retry"
+            //             break;
+            //     }
+            //     return answer;
+            // }
+
+            // console.log(sequentialSize(8));
+
+
+        // Replacing If else chains with switch
+        // -> Much better than chain of else statements
+            // /* Example */
+
+            function chainToSwitch(val){
+                var answer = "";
+
+            // Using Else IF Statement
+                switch (val){
+                case "bob":
+                    answer = "Marley"
+                    break;
+                case 42:
+                    answer = "The Answer"
+                    break;
+                case 1:
+                    answer = "The Answer is no #1"
+                    break;
+                case 99:
+                    answer = "Missed me by this much!"
+                    break;
+                case 7:
+                    answer = "Ate Nine!"
+                    break;
                 }
+                return answer
             }
 
-            console.log(testElseIf(100));
-        
+            console.log(chainToSwitch(99));
+
 
 
     // continue on "1:19:00"
-    // reference:
-    // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=3678s
+    // referenca:
+    // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=367bd
