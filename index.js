@@ -928,34 +928,297 @@
         // -> Much better than chain of else statements
             // /* Example */
 
-            function chainToSwitch(val){
-                var answer = "";
+            // function chainToSwitch(val){
+            //     var answer = "";
 
-            // Using Else IF Statement
-                switch (val){
-                case "bob":
-                    answer = "Marley"
-                    break;
-                case 42:
-                    answer = "The Answer"
-                    break;
-                case 1:
-                    answer = "The Answer is no #1"
-                    break;
-                case 99:
-                    answer = "Missed me by this much!"
-                    break;
-                case 7:
-                    answer = "Ate Nine!"
-                    break;
-                }
-                return answer
-            }
+            // // Using Else IF Statement
+            //     switch (val){
+            //     case "bob":
+            //         answer = "Marley"
+            //         break;
+            //     case 42:
+            //         answer = "The Answer"
+            //         break;
+            //     case 1:
+            //         answer = "The Answer is no #1"
+            //         break;
+            //     case 99:
+            //         answer = "Missed me by this much!"
+            //         break;
+            //     case 7:
+            //         answer = "Ate Nine!"
+            //         break;
+            //     }
+            //     return answer
+            // }
 
-            console.log(chainToSwitch(99));
+            // console.log(chainToSwitch(99));
+
+    // Returning boolean Values from functions
+    // -> To return a value with true or false value.
+        // /*Example*/
+
+        // // Simplifed
+        // function isThisLess(a,b){
+        //     return a < b;
+        // }
+
+        // console.log(isThisLess(10,15));
+
+        // //Complex
+        // function isLess(a,b){
+        //     if (a < b){
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+
+        // console.log(isLess(20,15));
+
+    // Returning Early Pattern from functions
+        // /* Example */
+
+        // function abTest(a,b){
+        //     if ( a < 0 || b < 0 ){
+        //         return undefined;
+        //     }
+
+        //     return Math.round(Math.pow(Math.sqrt(a) + Math.sqrt(b), 2))
+        // }
+
+        // console.log(abTest(-2,2));
 
 
+    // -> This is an Coding Exercise - Counting Cards
 
-    // continue on "1:19:00"
+        // var count = 0;
+        // function cc(card){
+
+        //     switch (card) {
+        //         case 2:
+        //         case 3:
+        //         case 4:
+        //         case 5:
+        //         case 6:
+        //             count++;
+        //             break;
+        //         case 10:
+        //         case "J":
+        //         case "Q":
+        //         case "K":
+        //         case "A":
+        //             count --;
+        //             break;
+        //     }
+
+        //     var holdBet = 'Hold'
+        //     if (count > 0){
+        //         holdBet = 'Bet'
+        //     }
+
+        //     return count + " " + holdBet;
+
+        // }
+
+        // cc(2); cc('K'); cc('k'); cc('K'); cc('A');
+        // console.log(cc(4));
+
+    // Build Javascript Objects
+    // -> Objects are similar to array except that instead of using indexes to access data, it use properties.
+    // -> Notable difference is using { } instead of [ ]
+        // /* Example
+        //     ourDog is the object
+        //     name, legs, tails and friends are the properties
+        //     and the values are camper, 4, 1 and ["Everything"]
+        // */
+        //     var ourDog = {
+        //         "name": "Camper",
+        //         "legs": 4,
+        //         "tails": 1,
+        //         "friends": ["Everything"]
+        //     };
+
+        //     console.log(ourDog.friends);
+        
+        // // Another example
+        //     var myDog = {
+        //         "name": "Dog",
+        //         "legs": 3,
+        //         "tails": 2,
+        //         "friends": ["No Friends"]
+        //     };
+
+        //     console.log(myDog.friends);
+        
+        // Accessing object properties with dot notation
+            /* Example */
+
+        //      var testObj = {
+        //         "hat": "ballcap",
+        //         "shirt": "jersey",
+        //         "shoes": "cleats"
+        //      };
+
+        //      var hatValue = testObj.hat
+        //      var shirtValue = testObj.shirt
+
+        //      console.log(hatValue);
+        //      console.log(shirtValue);
+
+       
+        // Access object Propperties with Bracket notation
+            /* Example */
+
+            // var testObj = {
+            //     "an entree": "hamburger",
+            //     "my side": "veggies",
+            //     "the drink": "water"
+            // };
+
+            // var entreeValue = testObj;
+            // var drinkValue = testObj;
+
+            // console.log(entreeValue["an entree"]);
+            // console.log(drinkValue['my side']);
+
+    // Accessing Object Properties with Variables
+        // // Example:    
+        //     var testObj = {
+        //         12: "Namath",
+        //         16: "Montana",
+        //         19: "Unitas",
+        //     };
+
+        //     var playerNumber = 16;
+        //     var player = testObj[playerNumber]; // You can now use the playerNumber to look up for value property
+
+        //     console.log(player);
+
+    // Updating object properties using dot notation
+        // // Example:
+        //     var ourDog = {
+        //         "name": "Camper",
+        //         "legs": 4,
+        //         "tails": 1,
+        //         "friends": "[Everyone]"
+        //     };
+
+        //     ourDog.name = "Happy";
+        //     ourDog.friends = ["Everything"]
+
+        //     console.log(ourDog.name);
+        //     console.log(ourDog.friends);
+
+        // // Another example:
+        //     var myDog = {
+        //         "name": "Coder",
+        //         "legs": "3",
+        //         "tails": "1",
+        //         "friends": ["Sirtag", "Mark"]
+        //     };
+
+        //     myDog.legs = 4;
+
+        //     console.log(myDog.legs);
+
+    // Adding a new properties to an object
+        // You can add using dot or bracket notation
+        // Example:
+
+        //     var ourDog = {
+        //         "name": "camper",
+        //         "legs": "4",
+        //         "tails": "1",
+        //         "friends": ["Everything!"]
+        //     };
+
+        //     ourDog.Bark = "bow-wow";
+        //     ourDog['Ears'] = 2;
+        
+        // // Another example:
+        //     var myDog = {
+        //         "name": "Happy Coder",
+        //         "legs": "4",
+        //         "tails": "1",
+        //         "friends": ["Sirtag", "Mark"]
+        //     };
+
+        //     myDog.furr = "brown";
+        //     myDog.eyes = 2;
+
+        //     console.log(ourDog);
+        //     console.log(myDog);
+
+    // Deleting properties from an object
+        // Example:
+        //     var ourDog = {
+        //         "name": "camper",
+        //         "legs": "4",
+        //         "tails": "1",
+        //         "friends": ["Everything!"],
+        //         "bark": "bow-wow"
+        //     };
+
+        //     delete ourDog.bark;
+
+        //     console.log(ourDog.bark); // This is now undefined
+        
+        // // Another example:
+        //     var myDog = {
+        //         "name": "Happy Coder",
+        //         "legs": "4",
+        //         "tails": "1",
+        //         "friends": ["Sirtag", "Mark"],
+        //         "furr": "brown"
+        //     };
+
+        //     delete myDog.furr;
+        //     console.log(myDog.furr);
+
+    // Using objects for lookups
+    // -> Objects can be thought of as a key value storage like a dictionary.
+    // Example:
+            // function phoneticLookup(val){
+            //     var result = "";
+        // Changing this switch statement using object
+            //     switch (val) {
+            //         case "alpha":
+            //             result ="adams";
+            //             break;
+            //         case "bravo":
+            //             result ="boston";
+            //             break;
+            //         case "charlie":
+            //             result ="chicago";
+            //             break;
+            //         case "delta":
+            //             result ="denver";
+            //             break;
+            //         case "echo":
+            //             result ="easy";
+            //             break;
+            //         default:
+            //             break;
+            //     };
+            //     return result;
+            // };
+
+        // This is the object used to replace and look into the switch statements
+            // var lookup = { 
+            //     "alpha": "Adams",
+            //     "bravo": "boston",
+            //     "charlie": "chicago",
+            //     "delta": "denver",
+            //     "echo": "easy"
+            // };
+            //     result = lookup[val];
+            //     return result;
+            // }
+
+            // console.log(phoneticLookup("echo"));
+            
+
+    // continue on "1:49:00"
     // referenca:
     // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=367bd
