@@ -1033,7 +1033,7 @@
         //     and the values are camper, 4, 1 and ["Everything"]
         // */
         //     var ourDog = {
-        //         "name": "Camper",
+        //         "name": "Camper", // This is a key value pairs
         //         "legs": 4,
         //         "tails": 1,
         //         "friends": ["Everything"]
@@ -1217,8 +1217,69 @@
             // }
 
             // console.log(phoneticLookup("echo"));
-            
+        
+        // Testing objects for properties
+        // -> Using method
+            // Function inside an object is called method.
+            // Example using hasOwnProperty method:
+            /* in
+                if (myObj.hasOwnProperty(checkProp)) {
+                            return myObj[checkProp];
+                        }
+                myObj is the object itself
+                .hasOwnPropert is the made up method
+                in short methodName.madeUpMethodName(parameters)
+                */                      
 
-    // continue on "1:49:00"
+                // var myObj = {
+                //     gift: "pony",
+                //     pet: "kitten",
+                //     bed: "sleigh",
+                // };
+
+                // function checkObj(checkProp) {
+
+                //     if (myObj.hasOwnProperty(checkProp)) { // .hasOwnProperty is a method.
+                //         return myObj[checkProp]; // use  dot . or bracket [] to access property.
+                //     } else {
+                //         return "not found";
+                //     }
+                // }
+
+                // console.log(checkObj("car"));
+
+        // Manipulating complex objects
+        // Example:
+            var myMusic = [
+                { // Object 1 has 5 properties which is artists, title, release_year, formats and gold.
+                    "artists": "Billy Joel", 
+                    "title": "Piano Man",
+                    "release_year": 1973,
+                    "formats": [ // This is an array for formats property value.
+                        "CD",
+                        "8t",
+                        "LP",
+                    ],
+
+                    "gold" : true
+                },
+                { // Object 2 has only 4 property
+                    "artists": "Mark Vargas",
+                    "title": "Programmer",
+                    "release_year": 2023,
+                    "formats": [
+                        "Javascript",
+                        "Python",
+                        "React",
+                        "Vue",
+                        "Ruby on rails"
+                    ]
+
+                }
+            ];
+
+            console.log(myMusic);
+
+    // continue on "2:00:00"
     // referenca:
     // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=367bd
