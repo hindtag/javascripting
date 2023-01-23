@@ -1082,204 +1082,441 @@
             // console.log(entreeValue["an entree"]);
             // console.log(drinkValue['my side']);
 
-    // Accessing Object Properties with Variables
-        // // Example:    
-        //     var testObj = {
-        //         12: "Namath",
-        //         16: "Montana",
-        //         19: "Unitas",
-        //     };
-
-        //     var playerNumber = 16;
-        //     var player = testObj[playerNumber]; // You can now use the playerNumber to look up for value property
-
-        //     console.log(player);
-
-    // Updating object properties using dot notation
-        // // Example:
-        //     var ourDog = {
-        //         "name": "Camper",
-        //         "legs": 4,
-        //         "tails": 1,
-        //         "friends": "[Everyone]"
-        //     };
-
-        //     ourDog.name = "Happy";
-        //     ourDog.friends = ["Everything"]
-
-        //     console.log(ourDog.name);
-        //     console.log(ourDog.friends);
-
-        // // Another example:
-        //     var myDog = {
-        //         "name": "Coder",
-        //         "legs": "3",
-        //         "tails": "1",
-        //         "friends": ["Sirtag", "Mark"]
-        //     };
-
-        //     myDog.legs = 4;
-
-        //     console.log(myDog.legs);
-
-    // Adding a new properties to an object
-        // You can add using dot or bracket notation
-        // Example:
-
-        //     var ourDog = {
-        //         "name": "camper",
-        //         "legs": "4",
-        //         "tails": "1",
-        //         "friends": ["Everything!"]
-        //     };
-
-        //     ourDog.Bark = "bow-wow";
-        //     ourDog['Ears'] = 2;
-        
-        // // Another example:
-        //     var myDog = {
-        //         "name": "Happy Coder",
-        //         "legs": "4",
-        //         "tails": "1",
-        //         "friends": ["Sirtag", "Mark"]
-        //     };
-
-        //     myDog.furr = "brown";
-        //     myDog.eyes = 2;
-
-        //     console.log(ourDog);
-        //     console.log(myDog);
-
-    // Deleting properties from an object
-        // Example:
-        //     var ourDog = {
-        //         "name": "camper",
-        //         "legs": "4",
-        //         "tails": "1",
-        //         "friends": ["Everything!"],
-        //         "bark": "bow-wow"
-        //     };
-
-        //     delete ourDog.bark;
-
-        //     console.log(ourDog.bark); // This is now undefined
-        
-        // // Another example:
-        //     var myDog = {
-        //         "name": "Happy Coder",
-        //         "legs": "4",
-        //         "tails": "1",
-        //         "friends": ["Sirtag", "Mark"],
-        //         "furr": "brown"
-        //     };
-
-        //     delete myDog.furr;
-        //     console.log(myDog.furr);
-
-    // Using objects for lookups
-    // -> Objects can be thought of as a key value storage like a dictionary.
-    // Example:
-            // function phoneticLookup(val){
-            //     var result = "";
-        // Changing this switch statement using object
-            //     switch (val) {
-            //         case "alpha":
-            //             result ="adams";
-            //             break;
-            //         case "bravo":
-            //             result ="boston";
-            //             break;
-            //         case "charlie":
-            //             result ="chicago";
-            //             break;
-            //         case "delta":
-            //             result ="denver";
-            //             break;
-            //         case "echo":
-            //             result ="easy";
-            //             break;
-            //         default:
-            //             break;
+        // Accessing Object Properties with Variables
+            // // Example:    
+            //     var testObj = {
+            //         12: "Namath",
+            //         16: "Montana",
+            //         19: "Unitas",
             //     };
-            //     return result;
-            // };
 
-        // This is the object used to replace and look into the switch statements
-            // var lookup = { 
-            //     "alpha": "Adams",
-            //     "bravo": "boston",
-            //     "charlie": "chicago",
-            //     "delta": "denver",
-            //     "echo": "easy"
-            // };
-            //     result = lookup[val];
-            //     return result;
-            // }
+            //     var playerNumber = 16;
+            //     var player = testObj[playerNumber]; // You can now use the playerNumber to look up for value property
 
-            // console.log(phoneticLookup("echo"));
-        
-        // Testing objects for properties
-        // -> Using method
-            // Function inside an object is called method.
-            // Example using hasOwnProperty method:
-            /* in
-                if (myObj.hasOwnProperty(checkProp)) {
-                            return myObj[checkProp];
-                        }
-                myObj is the object itself
-                .hasOwnPropert is the made up method
-                in short methodName.madeUpMethodName(parameters)
-                */                      
+            //     console.log(player);
 
-                // var myObj = {
-                //     gift: "pony",
-                //     pet: "kitten",
-                //     bed: "sleigh",
+        // Updating object properties using dot notation
+            // // Example:
+            //     var ourDog = {
+            //         "name": "Camper",
+            //         "legs": 4,
+            //         "tails": 1,
+            //         "friends": "[Everyone]"
+            //     };
+
+            //     ourDog.name = "Happy";
+            //     ourDog.friends = ["Everything"]
+
+            //     console.log(ourDog.name);
+            //     console.log(ourDog.friends);
+
+            // // Another example:
+            //     var myDog = {
+            //         "name": "Coder",
+            //         "legs": "3",
+            //         "tails": "1",
+            //         "friends": ["Sirtag", "Mark"]
+            //     };
+
+            //     myDog.legs = 4;
+
+            //     console.log(myDog.legs);
+
+        // Adding a new properties to an object
+            // You can add using dot or bracket notation
+            // Example:
+
+            //     var ourDog = {
+            //         "name": "camper",
+            //         "legs": "4",
+            //         "tails": "1",
+            //         "friends": ["Everything!"]
+            //     };
+
+            //     ourDog.Bark = "bow-wow";
+            //     ourDog['Ears'] = 2;
+            
+            // // Another example:
+            //     var myDog = {
+            //         "name": "Happy Coder",
+            //         "legs": "4",
+            //         "tails": "1",
+            //         "friends": ["Sirtag", "Mark"]
+            //     };
+
+            //     myDog.furr = "brown";
+            //     myDog.eyes = 2;
+
+            //     console.log(ourDog);
+            //     console.log(myDog);
+
+        // Deleting properties from an object
+            // Example:
+            //     var ourDog = {
+            //         "name": "camper",
+            //         "legs": "4",
+            //         "tails": "1",
+            //         "friends": ["Everything!"],
+            //         "bark": "bow-wow"
+            //     };
+
+            //     delete ourDog.bark;
+
+            //     console.log(ourDog.bark); // This is now undefined
+            
+            // // Another example:
+            //     var myDog = {
+            //         "name": "Happy Coder",
+            //         "legs": "4",
+            //         "tails": "1",
+            //         "friends": ["Sirtag", "Mark"],
+            //         "furr": "brown"
+            //     };
+
+            //     delete myDog.furr;
+            //     console.log(myDog.furr);
+
+        // Using objects for lookups
+        // -> Objects can be thought of as a key value storage like a dictionary.
+        // Example:
+                // function phoneticLookup(val){
+                //     var result = "";
+            // Changing this switch statement using object
+                //     switch (val) {
+                //         case "alpha":
+                //             result ="adams";
+                //             break;
+                //         case "bravo":
+                //             result ="boston";
+                //             break;
+                //         case "charlie":
+                //             result ="chicago";
+                //             break;
+                //         case "delta":
+                //             result ="denver";
+                //             break;
+                //         case "echo":
+                //             result ="easy";
+                //             break;
+                //         default:
+                //             break;
+                //     };
+                //     return result;
                 // };
 
-                // function checkObj(checkProp) {
-
-                //     if (myObj.hasOwnProperty(checkProp)) { // .hasOwnProperty is a method.
-                //         return myObj[checkProp]; // use  dot . or bracket [] to access property.
-                //     } else {
-                //         return "not found";
-                //     }
+            // This is the object used to replace and look into the switch statements
+                // var lookup = { 
+                //     "alpha": "Adams",
+                //     "bravo": "boston",
+                //     "charlie": "chicago",
+                //     "delta": "denver",
+                //     "echo": "easy"
+                // };
+                //     result = lookup[val];
+                //     return result;
                 // }
 
-                // console.log(checkObj("car"));
+                // console.log(phoneticLookup("echo"));
+            
+            // Testing objects for properties
+            // -> Using method
+                // Function inside an object is called method.
+                // Example using hasOwnProperty method:
+                /* in
+                    if (myObj.hasOwnProperty(checkProp)) {
+                                return myObj[checkProp];
+                            }
+                    myObj is the object itself
+                    .hasOwnPropert is the made up method
+                    in short methodName.madeUpMethodName(parameters)
+                    */                      
 
-        // Manipulating complex objects
-        // Example:
-            var myMusic = [
-                { // Object 1 has 5 properties which is artists, title, release_year, formats and gold.
-                    "artists": "Billy Joel", 
-                    "title": "Piano Man",
-                    "release_year": 1973,
-                    "formats": [ // This is an array for formats property value.
-                        "CD",
-                        "8t",
-                        "LP",
-                    ],
+                    // var myObj = {
+                    //     gift: "pony",
+                    //     pet: "kitten",
+                    //     bed: "sleigh",
+                    // };
 
-                    "gold" : true
-                },
-                { // Object 2 has only 4 property
-                    "artists": "Mark Vargas",
-                    "title": "Programmer",
-                    "release_year": 2023,
-                    "formats": [
-                        "Javascript",
-                        "Python",
-                        "React",
-                        "Vue",
-                        "Ruby on rails"
-                    ]
+                    // function checkObj(checkProp) {
 
+                    //     if (myObj.hasOwnProperty(checkProp)) { // .hasOwnProperty is a method.
+                    //         return myObj[checkProp]; // use  dot . or bracket [] to access property.
+                    //     } else {
+                    //         return "not found";
+                    //     }
+                    // }
+
+                    // console.log(checkObj("car"));
+
+            // Manipulating complex objects
+            // Example:
+                // var myMusic = [
+                //     { // Object 1 has 5 properties which is artists, title, release_year, formats and gold.
+                //         "artists": "Billy Joel", 
+                //         "title": "Piano Man",
+                //         "release_year": 1973,
+                //         "formats": [ // This is an array for formats property value.
+                //             "CD",
+                //             "8t",
+                //             "LP",
+                //         ],
+
+                //         "gold" : true
+                //     },
+                //     { // Object 2 has only 4 property
+                //         "artists": "Mark Vargas",
+                //         "title": "Programmer",
+                //         "release_year": 2023,
+                //         "formats": [
+                //             "Javascript",
+                //             "Python",
+                //             "React",
+                //             "Vue",
+                //             "Ruby on rails"
+                //         ]
+
+                //     }
+                // ];
+
+                // console.log(myMusic);
+
+            // Accessing Nested Objects
+                // // Example:
+                //     var myStorage = {
+                //         "car" : { // has 2 properties which are inside and outside
+                //             "Inside": { //
+                //                 "glove_box": "maps",
+                //                 "passenger_seat": "crumbs",
+                //             },
+                //             "Outside": {
+                //                 "trunk": "jack",
+                //             }
+                //         }
+                //     };
+
+                //     var gloveBoxContents = myStorage.car.Inside["glove_box"];
+                //     console.log(gloveBoxContents);
+
+            // Accessing nested arrays
+                // // Example:
+                //     var myPlants = [
+                //         {
+                //             type: "flowers",
+                //             list: [
+                //                 "rose",
+                //                 "tulip",
+                //                 "dandalion"
+                //             ]
+                //         },
+                //         {
+                //             type: "trees",
+                //             list: [
+                //                 "fir",
+                //                 "pine",
+                //                 "birch"
+                //             ]
+                //         }
+                //     ]; 
+
+                //     var secondTree = myPlants[1].list[1]; // Accessing pine
+                //     var firstTree = myPlants[1].list[0]; // Accessing first tree
+                //     var thirdFlower = myPlants[0].list[2]; // Accessing third flower
+                    
+                //     console.log(secondTree);
+                //     console.log(firstTree);
+                //     console.log(thirdFlower);
+
+
+            // -> This is a coding challenge for record collection
+            /* Where for example 24548 is the id, artist etc is the property and bon jovi is the value.
+            */
+            // var collection = {
+            //     "24548": {
+            //         "album": "slippery when wet",
+            //         "artist": "bon jovi",
+            //         "tracks": [
+            //             "Let it rock",
+            //             "Welcome to my life"
+            //         ]
+            //     },
+            //     "2468": {
+            //         "album": "1999",
+            //         "artist": "prince",
+            //         "tracks": [
+            //             "1999",
+            //             "little red corvette"
+            //         ]
+            //     },
+            //     "1245": {
+            //         "artist": "Robert Palmer",
+            //         "tracks": []
+            //     },
+            //     "5439":  {
+            //         "album": "ABBA Gold",
+            //     }
+            // };
+
+            // var collectionCopy = JSON.parse(JSON.stringify(collection)); // To Copy
+
+            // function updateRecords(id, prop, value){
+            //     if (value === ""){
+            //         delete collection [id][prop];
+            //     } else if (prop === "tracks"){
+            //         collection[id][prop] = collection[id][prop] || []; // If the tracks property is empty, create. thus, If it exists set it to equal itself. If it's not existing set it to equal an empty array. 
+            //         collection[id][prop].push(value); // Push the value at the end of the array
+            //     } else {
+            //         collection[id][prop] = value; // Default condition for if the value is not blank and the property is not tracks then push the value onto the property.
+            //     }
+            //     return collection;
+            // }
+            // updateRecords(24548, "album", ""); // This delete album for 24548
+            // updateRecords(2468, "tracks", "test"); // This add test in id property 2468 for tracks
+            // updateRecords(5439, "tracks", "way aram"); // this add a new prop for id 5439
+            // console.log(updateRecords(5439, "artists", "ABBA")); // this add in artist for 5439
+
+
+    // Loops
+        // Iterate with while loops
+        /* Allow you to run codes multiple times while specified condition is true.
+            And stops once it is no longer true.
+        -> Using while ()
+            steps:
+                1. set the variable name with starting value, this time I used i
+        */
+            // // Example: 
+            //     var myArray = [];
+                
+            //     var i = 0;  // i = variable name with 0 value at the starting.
+            //     while (i < 5 ){
+            //         myArray.push(i)
+            //         i++;
+            //     };
+
+            //     console.log(myArray);
+
+            // // Another example (count into 20):
+
+            //     var thisArray = [];
+            //     var countNum = 1;
+            //     while (countNum < 21 ){
+            //         thisArray.push(countNum)
+            //         countNum++;
+            //     }
+
+            //     console.log(thisArray);
+            
+            // // Another example (count to 10)
+            //     var countArray = [];
+
+            //     var i = 0;
+            //     while (i < 10 ){
+            //         countArray.push(i);
+            //         i++;
+            //     }
+
+            //     console.log(countArray);
+        
+        // Iterate with for loop
+            // // Example
+
+            // var ourArray = [];
+            
+            // for (var i = 0; i < 5; i++){ // Start with initialization, then the condition then the final expression.
+            //     ourArray.push(i);
+            // }
+
+            // console.log(ourArray);
+
+        // Iterate Odd Numbers with a For Loop
+            // Example: 
+
+            // var ourArray = [];
+
+            // for (var countNum = 0; countNum < 10; countNum +=2){ // Incrementing by 2
+            //     ourArray.push(countNum);
+            // }
+
+            // console.log(ourArray);
+
+        // Count backwards with a for loop
+            // Example:
+
+            // var ourArray = [];
+
+            // for (var countArray = 10; countArray > 0; countArray -= 2 ){ // Even numbers
+            //     ourArray.push(countArray);
+            // }
+
+            // console.log(ourArray);
+
+            // // Another Example:
+            // var myArray = [];
+
+            // for (var countArray = 9; countArray > 0; countArray -= 2 ){ // Odd numbers
+            //     myArray.push(countArray);
+            // }
+
+            // console.log(myArray);
+
+        // Iterate through an array with a for loop
+            // // example:
+            // var ourArr = [9, 10, 11, 12]; // Looking forward to have an answer of 42
+            // var ourTotal = 0;
+
+            // for (var i = 0; i < ourArr.length; i++){
+            //     ourTotal += ourArr[i];
+            // }
+
+            // console.log(ourTotal);
+            
+
+            // // Another example:
+            // var thisArr = [2, 3, 4, 5, 6]; // Looking forward to have an answer of 20
+            // var thisTotal = 0;
+
+            // for (var i = 0; i < thisArr.length; i++){
+            //     thisTotal += thisArr[i];
+            // }
+
+            // console.log(thisTotal);
+
+        
+        // Nesting for loops used for nested array
+
+        function multiplyAll(arr){
+            var product = 1;
+
+            for (var i = 0; i < arr.length; i++){ // arr will start at 3, since the array has 3 elements.
+                for (j = 0; j < arr[i].length; j++){
+                    product *= arr [i][j];
                 }
-            ];
+            };
 
-            console.log(myMusic);
+            return product;
+        }
 
-    // continue on "2:00:00"
-    // referenca:
-    // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=367bd
+        var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+        console.log(product);
+        
+        // Another example
+        function multiplyNum(arr){
+            var product = 1;
+
+            for (var i = 0; i < arr.length; i++){ // This will go to the outer array with 3 elements
+                for (j = 0; j < arr[i].length; j++){ // This will go through each inner elements
+                    product *= arr [i][j]; // i reference the outer array, while j references the inner array.
+                }
+            };
+
+            return product;
+        }
+
+        var product = multiplyNum([[1,2],[3,4],[5,6,7]]);
+
+        console.log(product);
+
+
+// continue on "2:32:00"
+// referenca:
+// https://www.youtube.com/watch?v=PkZNo7MFNFg&t=367bd
