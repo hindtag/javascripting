@@ -1532,4 +1532,38 @@ Variable
             }
 
             console.log(thisTotal);
-        
+
+    Nesting for loops used for nested array
+        Example:
+        function multiplyAll(arr){
+            var product = 1;
+
+            for (var i = 0; i < arr.length; i++){ // arr will start at 3, since the array has 3 elements.
+                for (j = 0; j < arr[i].length; j++){
+                    product *= arr [i][j];
+                }
+            };
+
+            return product;
+            }
+
+            var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+            console.log(product);
+            
+            Another example
+            function multiplyNum(arr){
+                var product = 1;
+
+                for (var i = 0; i < arr.length; i++){ // This will go to the outer array with 3 elements
+                    for (j = 0; j < arr[i].length; j++){ // This will go through each inner elements
+                        product *= arr [i][j]; // i reference the outer array, while j references the inner array.
+                    }
+                };
+
+                return product;
+            }
+
+            var product = multiplyNum([[1,2],[3,4],[5,6,7]]);
+
+            console.log(product);
