@@ -1483,38 +1483,57 @@
         
         // Nesting for loops used for nested array
 
-        function multiplyAll(arr){
-            var product = 1;
+        // function multiplyAll(arr){
+        //     var product = 1;
 
-            for (var i = 0; i < arr.length; i++){ // arr will start at 3, since the array has 3 elements.
-                for (j = 0; j < arr[i].length; j++){
-                    product *= arr [i][j];
-                }
-            };
+        //     for (var i = 0; i < arr.length; i++){ // arr will start at 3, since the array has 3 elements.
+        //         for (j = 0; j < arr[i].length; j++){
+        //             product *= arr [i][j];
+        //         }
+        //     };
 
-            return product;
-        }
+        //     return product;
+        // }
 
-        var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+        // var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
 
-        console.log(product);
+        // console.log(product);
         
-        // Another example
-        function multiplyNum(arr){
-            var product = 1;
+        // // Another example
+        // function multiplyNum(arr){
+        //     var product = 1;
 
-            for (var i = 0; i < arr.length; i++){ // This will go to the outer array with 3 elements
-                for (j = 0; j < arr[i].length; j++){ // This will go through each inner elements
-                    product *= arr [i][j]; // i reference the outer array, while j references the inner array.
-                }
-            };
+        //     for (var i = 0; i < arr.length; i++){ // This will go to the outer array with 3 elements
+        //         for (j = 0; j < arr[i].length; j++){ // This will go through each inner elements
+        //             product *= arr [i][j]; // i reference the outer array, while j references the inner array.
+        //         }
+        //     };
 
-            return product;
+        //     return product;
+        // }
+
+        // var product = multiplyNum([[1,2],[3,4],[5,6,7]]);
+
+        // console.log(product);
+
+       // This is a coding challenge to generate random whole numbers within a range
+        // Example:
+        function randomRange(min, max) {
+
+            return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+          }
+
+          var randomInt = randomRange(10, 15);
+          console.log(randomInt);
+
+        // Another Example:
+        function myRandomRange(myMin, myMax){
+
+            return Math.floor(Math.random() * (myMax - myMin)) + myMin;
         }
 
-        var product = multiplyNum([[1,2],[3,4],[5,6,7]]);
-
-        console.log(product);
+        var thisRandomRange = myRandomRange(5, 20);
+        console.log(thisRandomRange);
 
 
 // continue on "2:32:00"

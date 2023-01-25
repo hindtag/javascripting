@@ -1567,3 +1567,22 @@ Variable
             var product = multiplyNum([[1,2],[3,4],[5,6,7]]);
 
             console.log(product);
+
+    This is a coding challenge to generate random whole numbers within a range
+        Example:
+        function randomRange(min, max) {
+
+            return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+          }
+
+          var randomInt = randomRange(10, 15);
+          console.log(randomInt);
+
+        // Another Example:
+        function myRandomRange(myMin, myMax){
+
+            return Math.floor(Math.random() * (myMax - myMin)) + myMin;
+        }
+
+        var thisRandomRange = myRandomRange(5, 20);
+        console.log(thisRandomRange);
