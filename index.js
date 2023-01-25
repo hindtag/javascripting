@@ -1517,23 +1517,136 @@
         // console.log(product);
 
        // This is a coding challenge to generate random whole numbers within a range
+        // // Example:
+        // function randomRange(min, max) {
+
+        //     return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+        //   }
+
+        //   var randomInt = randomRange(10, 15);
+        //   console.log(randomInt);
+
+        // // Another Example:
+        // function myRandomRange(myMin, myMax){
+
+        //     return Math.floor(Math.random() * (myMax - myMin)) + myMin;
+        // }
+
+        // var thisRandomRange = myRandomRange(5, 20);
+        // console.log(thisRandomRange);
+
+        // Use the parseInt function -> Converting string to number
+        // -> It takes a string and returns an integer
         // Example:
-        function randomRange(min, max) {
+            // function convertToInteger(str){
+                
+            //     return parseInt(str);
+            // }
 
-            return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
-          }
+            // console.log(convertToInteger("56"));
+            
+        // -> Parseint function with Radix. Radix specifies the base of the number in the string.
+            // // Example:
+            //     function convertToInteger(str){
+            //         return parseInt(str, 2)
+            //     }
 
-          var randomInt = randomRange(10, 15);
-          console.log(randomInt);
+            //     console.log(convertToInteger("10011"));
+                
+        // // Use the conditional ternary operator
+        // // -> One line if else expression.
+        // /* condition ? statement-if-true : statement-if-false;*/
+        //     // Convert this:
+        //             function checkEqual(a,b){
+        //                 if (a === b){
+        //                     return true;
+        //                 } else{
+        //                     return false;
+        //                 }
+        //             }
 
-        // Another Example:
-        function myRandomRange(myMin, myMax){
+        //             console.log(checkEqual(1,1));
+            
+        //     // Example:
+        //             function checkIsEqual(a,b){
+        //                 return a === b ? true : false;
+        //             }
 
-            return Math.floor(Math.random() * (myMax - myMin)) + myMin;
-        }
+        //             console.log(checkIsEqual(1,2));
+            
+        // Use multiple conditional ternary operators.
+        // ->  More powerful if nested
+            // // Example checking if it is positive or negative:
+            //     function checkSign(num){
+            //        return num > 0 ? "positive" : num < 0 ? "negative" :"zero"
+            //     }
+            //     console.log(checkSign(-1));
 
-        var thisRandomRange = myRandomRange(5, 20);
-        console.log(thisRandomRange);
+        
+    // Difference between var and let keywords
+        // -> var - can be daclare more than once, if declared outside it is global if inside the function it is local.
+        // -> let - does not let your declare variable twice, the scope of let is limited to the block statement or expression that it was declared in.
+        // -> const - Read-only variable and cannot be reassigned, near functionality of Let.
+        // // Example:
+        // let catName = "quincy";
+        // let qoutes;
+
+        // catName = "beau";
+
+        // function catTalk(){
+        //     "use strict";
+        //     catName = "Oliver";
+        //     qoutes = catName + " says Meow!";
+        
+        // }
+
+        // console.log(catTalk);
+
+            // Compare scopes of the var and let keywords
+            // Example using var:
+            //     function checkScope (){
+            //         "use strict";
+            //         var i = "function scope";
+            //         if (true){
+            //             i = "block scope";
+            //             console.log("Block scope i is: ", i);
+            //         }
+            //             console.log("Function scope i is ", i);
+            //         return i;
+            //     }
+
+            //     console.log(checkScope(1));
+            
+            // // Example using let:
+            // function checkScope (){
+            //     "use strict";
+            //     let i = "function scope";
+            //     if (true){
+            //         let i = "block scope";
+            //         console.log("Block scope i is: ", i);
+            //     }
+            //         console.log("Function scope i is ", i);
+            //     return i;
+            // }
+
+            // console.log(checkScope(1));
+
+            // Declaring a Read-Only vrable with the const keyword
+            // Example:
+                    function printManyTimes(str){
+                        "use strict";
+
+                    var sentence = str + " this is cool!";
+
+                    sentence = str + " is amazing!"
+
+                    for (var i = 0; i < str.lenght; i+=2){
+                        console.log(sentence);
+                    }
+
+                    }
+                    printManyTimes("Freecodecamp");
+                    console.log(printManyTimes());
 
 
 // continue on "2:32:00"
