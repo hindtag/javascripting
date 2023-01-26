@@ -1808,4 +1808,118 @@ Variable
                     })();
                     console.log(arr2);
 
+            Use desctructuring assignment to assign variables from objects
+                Example:
+                    let voxel = {x: 3.6, y: 7.4, z: 6.54};
+                    
+                    /* destructuring this
+                    let x = voxel.x // x: 3.6
+                    let y = voxel.y // y: 7.4
+                    let z = voxel.z // z: 6.54
+                    */
+
+                    const {x:a, y:b, z:c} = voxel; // This is the desctructuring syntax a: 3.6, b: 7.4, c: 6.54 by copying the value of an object to a string
+
+                    const AVG_TEMPERATURES = {
+                        today: 77.5,
+                        tomorrow: 79
+                    };
+
+                    function getTempOfTomorrow(avgTemperatures){
+                        "use strict";
+                    const {tomorrow : getTempOfTomorrow} = avgTemperatures; // get the tomorrow field from the AVG_TEMPERATURES object and assign it to tempOfTomorrow variable.
+
+                    return getTempOfTomorrow;
+                    }
+                    
+                    function getTempOfToday(avgTemperatures){ // get the today field from the AVG_TEMPERATURES object and assign it to tempOfToday variable.
+                        "use strict";
+                        const {today : getTempOfToday} = avgTemperatures;
+                        return getTempOfToday;
+                    }
+
+
+                    console.log(getTempOfToday(AVG_TEMPERATURES));
+                    console.log(getTempOfTomorrow(AVG_TEMPERATURES));
+
+            
+            Destructuring assignment with nested objects
+                Example:
+                    const LOCAL_FORECAST = {
+                        today: { min: 72, max: 83},
+                        tomorrow: { min: 73, max: 84.6}
+                    };
+
+                    function getMaxOfTomorrow(forecast){
+                        "use strict";
+
+                        const {tomorrow : {max : maxOfTomorrow}} = forecast;
+                        return maxOfTomorrow;
+                    }
+
+                    console.log(getMaxOfTomorrow(LOCAL_FORECAST));
+
+            Use destructuring assignment to assign variables from arrays.
+            The difference of destructuring an array from object is that you cannot specify which elemet from array to go into a variable.
+                Example: 
+                    const [z, x, , y] = [1,2,3,4,5,6];
+                    console.log(z,x,y);
+                    
+                    let a = 8, b = 6;
+                    (()=> {
+                        "use strict";
+                        [a,b] = [b,a] // switching places
+                    })();
+
+                    console.log(a);
+                    console.log(b);
+
+            
+            Use destructuring assignment with the rest operator
+                Example:
+                    const source = [1,2,3,4,5,6,7,8,9,10];
+                    function removeFirstTwo(list){
+                        const [,,...arr] = list;// the comma says do nothing with the first and second element.
+                        return arr;
+                    }
+
+                    const arr = removeFirstTwo(source);
+                    console.log(arr);
+                    console.log(source);
+
+
+            Use desctructuring assignment to pass an object as a function's Parameters
+                Example:
+                    const stats = {
+                        max: 56.78,
+                        standard_deviation: 4.34,
+                        median: 34.54,
+                        mode: 23.87,
+                        min: -0.75,
+                        average: 35.85
+                    };
+                    const half = (function(){
+                        return function half({max, min}){
+                            return (max + min) / 2.0;
+                        };
+                    })();
+
+                    console.log(stats);
+                    console.log(half(stats));
+
+            Create strings using template literals
+            -> using backtick ``
+            -> a special type of string that makes creating complex strings easier.
+                Example:
+
+                const person = {
+                    name: "Zodiac Hasbro",
+                    age: 56
+                };
+
+                const greeting = `Hello, my name is ${person.name}! I am ${person.age} years old.`;
+
+                console.log(greeting);
+
+        
             
