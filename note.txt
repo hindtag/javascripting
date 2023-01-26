@@ -1921,5 +1921,98 @@ Variable
 
                 console.log(greeting);
 
-        
+        Coding challenge
+        /* Create an output for this:
+        makeList(result.failure) should return:
+        [
+            `<li class="text-warning">no-var</li>`,
+            `<li class="text-warning">var-on-top</li>`,
+            `<li class="text-warning">linebreak</li>`]          
+        ]
+        */
+            const result = {
+                success: ["max-length", "no-amd", "prefer-arrow-functions"],
+                failure: ["no-var", "var-on-top", "linebreak"],
+                skipped: ["id-blacklist", "no-dup-keys"],
+            };
+
+            function makeList(arr){
+                const resultDisplayArray = [];
+                for (let i = 0; i < arr.length; i++){
+                    resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`)
+                }
+
+                return resultDisplayArray;
+            }
+
+            const resultDisplayArray = makeList(result.failure);
             
+            console.log(resultDisplayArray);
+
+            
+            Writing concise object literal declarations using simple fields.
+                From this example:
+                const createPerson = (name, age, gender) => {
+                    return {
+                        name: name,
+                        age: age,
+                        gender: gender,
+                    };
+                };
+
+                To this example:
+                const createNewPerson = (name, age, gender) => ({name, age, gender})
+                console.log(createPerson("Zodiac Hasbro", 56, "male"));
+                console.log(createNewPerson("Zodiac Hasbro", 56, "male"));
+            
+                Write concise declarative functions
+                    From this example
+                        const bicycle = {
+                            gear:2,
+                            setGear: function(newGear){
+                                "use strict";
+                                this.gear = newGear;
+                            } 
+                        };
+
+                        bicycle.setGear(3);
+                        console.log(bicycle.gear);
+
+                    To this
+                        const myBicycle = {
+                            gear:2,
+                            setGear(newGear){
+                                "use strict";
+                                this.gear = newGear;
+                            } 
+                        };
+
+                        myBicycle.setGear(3);
+                        console.log(myBicycle.gear);
+
+                Use class syntax to define a constructor function
+                    Example:
+                    class SpaceShuttle {
+                        constructor(targetPlanet){
+                            this.targetPlanet = targetPlanet;
+                        }
+                    } // this is a constructor function
+
+                    var zeus = new SpaceShuttle('Jupiter'); // instantiate a new SpaceShuttle object
+                    var poseidon = new SpaceShuttle('Juggernaut')
+                    console.log(zeus.targetPlanet);
+                    console.log(poseidon.targetPlanet);
+
+                    Another example:
+                    function makeClass (){
+                        class vegetable {
+                        constructor(name){
+                            this.namne = name;
+                        }
+                        }
+                        return vegetable;
+                    }
+
+                    const vegetable = makeClass();
+                    const carrot = new makeClass('carrot');
+                    console.log(carrot.name);
