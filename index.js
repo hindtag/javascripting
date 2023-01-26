@@ -1632,23 +1632,254 @@
             // console.log(checkScope(1));
 
             // Declaring a Read-Only vrable with the const keyword
+            // // Example:
+            //         function printManyTimes(str){
+            //             "use strict";
+
+            //         var sentence = str + " this is cool!";
+
+            //         sentence = str + " is amazing!"
+
+            //         for (var i = 0; i < str.lenght; i+=2){
+            //             console.log(sentence);
+            //         }
+
+            //         }
+            //         printManyTimes("Freecodecamp");
+            //         console.log(printManyTimes());
+
+            
+            // mutate an array declared with const
+            // -> you cant reassign a const variable, but you can mutate it instead.
+                // // Example: 
+                // const s = [5,7,2];
+
+                // function editInPlace(){
+                //     "use strict";
+
+                //     // s = [2,5,7]; // using a const
+                //     s[0] = 2;
+                //     s[1] = 5;
+                //     s[2] = 7;
+
+                // }
+                // editInPlace();
+
+                // console.log(s);
+
+            // Prevent Object Mutation
+                // Example:
+                // function freezeObj(){
+                //     "use strict";
+
+                //     const MATH_CONSTANTS = {
+                //         PI: 3.14
+                //     };
+                //         Object.freeze(MATH_CONSTANTS)
+                //     try { // this is a try catch block
+                //         MATH_CONSTANTS.PI = 99;
+                //     } catch( ex ) {
+                //         console.log(ex);
+                //     }
+                //     return MATH_CONSTANTS.PI;
+                // }
+
+                // const PI = freezeObj();
+
+                // console.log(PI);
+
+            // Use arrow functions to write concise anonymous functions
+                // // From:
+                // let magic = function () => {
+                //     return new Date();
+                // };
+
+                // // To
+
+                // const myMagic = () => new Date();
+
+                // console.log(magic);
+
+            // Write arrow function with parameters
+                // Example:
+                // const myConcat = (arr1, arr2) =>  arr1.concat(arr2);
+
+                // console.log(myConcat([1,2],[3,4,5]));
+            
+            // Write higher order arrow functions
+            // -> Whenever one function takes another function as an argument, that's a good time for an arrow function.
+                // Example:
+                // const realNumberArray = [4,5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+                
+                // const squareList = (arr) => {
+                //     const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x); // Filtering only whole numbers that is more than 0.
+                //     return squaredIntegers;
+                // }
+
+                // const squaredIntegers = squareList(realNumberArray);
+                // console.log(squaredIntegers);
+            
+            // -> Using default parameters, a default parameter kicks in when the argument is not specified or is undefined.
+                // const increment = (function () {
+                //     return function increment(number, value = 1){
+                //         return number + value;
+                //     };
+                // })();
+
+                // console.log(increment(10,2));
+                // console.log(increment(10));
+
+            // Use the rest operator with function parameters
+            // -> using ... dots
+            // -> REST operator allows you to create a function that takes a variable number of arguments.
+                    // // Example from :
+                    // const sum = (function(){
+                    //     return function sum(x,y,z){
+                    //         const args = [x,y,z];
+                    //         return args.reduce((a,b) => a + b, );
+                    //     };
+
+                    // })();
+
+                    // console.log(sum(1,2,3));
+
+
+                    // // Example to
+                    // const sum = (function(){
+                    //     return function sum(...args){ // ... is the rest operator
+                    //         return args.reduce((a,b) => a + b, );
+                    //     };
+
+                    // })();
+
+                    // console.log(sum(1,2,3,4));
+
+            // Use the spread operator to evaluate arrays in-place
+            // -> It spreads out an array. 
             // Example:
-                    function printManyTimes(str){
-                        "use strict";
+                    // const arr1 = ['JAN','FEB','MAR','APR', 'MAY'];
+                    // let arr2;
+                    // (function () {
+                    //     arr2 = [...arr1];
+                    //     arr1[0] = 'potato'
+                    // })();
+                    // console.log(arr2);
 
-                    var sentence = str + " this is cool!";
+            // Use desctructuring assignment to assign variables from objects
+                // Example:
+                    // let voxel = {x: 3.6, y: 7.4, z: 6.54};
+                    
+                    // /* destructuring this
+                    // let x = voxel.x // x: 3.6
+                    // let y = voxel.y // y: 7.4
+                    // let z = voxel.z // z: 6.54
+                    // */
 
-                    sentence = str + " is amazing!"
+                    // const {x:a, y:b, z:c} = voxel; // This is the desctructuring syntax a: 3.6, b: 7.4, c: 6.54 by copying the value of an object to a string
 
-                    for (var i = 0; i < str.lenght; i+=2){
-                        console.log(sentence);
-                    }
+                    // const AVG_TEMPERATURES = {
+                    //     today: 77.5,
+                    //     tomorrow: 79
+                    // };
 
-                    }
-                    printManyTimes("Freecodecamp");
-                    console.log(printManyTimes());
+                    // function getTempOfTomorrow(avgTemperatures){
+                    //     "use strict";
+                    // const {tomorrow : getTempOfTomorrow} = avgTemperatures; // get the tomorrow field from the AVG_TEMPERATURES object and assign it to tempOfTomorrow variable.
+
+                    // return getTempOfTomorrow;
+                    // }
+                    
+                    // function getTempOfToday(avgTemperatures){ // get the today field from the AVG_TEMPERATURES object and assign it to tempOfToday variable.
+                    //     "use strict";
+                    //     const {today : getTempOfToday} = avgTemperatures;
+                    //     return getTempOfToday;
+                    // }
 
 
-// continue on "2:32:00"
+                    // console.log(getTempOfToday(AVG_TEMPERATURES));
+                    // console.log(getTempOfTomorrow(AVG_TEMPERATURES));
+
+            
+            // Destructuring assignment with nested objects
+                // Example:
+                    // const LOCAL_FORECAST = {
+                    //     today: { min: 72, max: 83},
+                    //     tomorrow: { min: 73, max: 84.6}
+                    // };
+
+                    // function getMaxOfTomorrow(forecast){
+                    //     "use strict";
+
+                    //     const {tomorrow : {max : maxOfTomorrow}} = forecast;
+                    //     return maxOfTomorrow;
+                    // }
+
+                    // console.log(getMaxOfTomorrow(LOCAL_FORECAST));
+
+            // Use destructuring assignment to assign variables from arrays.
+            // The difference of destructuring an array from object is that you cannot specify which elemet from array to go into a variable.
+                // Example: 
+                    // const [z, x, , y] = [1,2,3,4,5,6];
+                    // console.log(z,x,y);
+                    
+                    // let a = 8, b = 6;
+                    // (()=> {
+                    //     "use strict";
+                    //     [a,b] = [b,a] // switching places
+                    // })();
+
+                    // console.log(a);
+                    // console.log(b);
+
+            // Use destructuring assignment with the rest operator
+                // Example:
+                    // const source = [1,2,3,4,5,6,7,8,9,10];
+                    // function removeFirstTwo(list){
+                    //     const [,,...arr] = list;// the comma says do nothing with the first and second element.
+                    //     return arr;
+                    // }
+
+                    // const arr = removeFirstTwo(source);
+                    // console.log(arr);
+                    // console.log(source);
+
+            // Use desctructuring assignment to pass an object as a function's Parameters
+                // Example:
+                    // const stats = {
+                    //     max: 56.78,
+                    //     standard_deviation: 4.34,
+                    //     median: 34.54,
+                    //     mode: 23.87,
+                    //     min: -0.75,
+                    //     average: 35.85
+                    // };
+                    // const half = (function(){
+                    //     return function half({max, min}){
+                    //         return (max + min) / 2.0;
+                    //     };
+                    // })();
+
+                    // console.log(stats);
+                    // console.log(half(stats));
+                    
+            // Create strings using template literals
+            // -> using backtick ``
+            // -> a special type of string that makes creating complex strings easier.
+                // Example:
+                // const person = {
+                //     name: "Zodiac Hasbro",
+                //     age: 56
+                // };
+
+                // const greeting = `Hello, my name is ${person.name}! I am ${person.age} years old.`;
+
+                // console.log(greeting);
+
+        // Coding challenge
+            const result = {
+                success: [],
+            }
+                
+// continue on "3:08:00"
 // referenca:
 // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=367bd
