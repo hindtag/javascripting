@@ -1632,23 +1632,139 @@
             // console.log(checkScope(1));
 
             // Declaring a Read-Only vrable with the const keyword
+            // // Example:
+            //         function printManyTimes(str){
+            //             "use strict";
+
+            //         var sentence = str + " this is cool!";
+
+            //         sentence = str + " is amazing!"
+
+            //         for (var i = 0; i < str.lenght; i+=2){
+            //             console.log(sentence);
+            //         }
+
+            //         }
+            //         printManyTimes("Freecodecamp");
+            //         console.log(printManyTimes());
+
+            
+            // mutate an array declared with const
+            // -> you cant reassign a const variable, but you can mutate it instead.
+                // // Example: 
+                // const s = [5,7,2];
+
+                // function editInPlace(){
+                //     "use strict";
+
+                //     // s = [2,5,7]; // using a const
+                //     s[0] = 2;
+                //     s[1] = 5;
+                //     s[2] = 7;
+
+                // }
+                // editInPlace();
+
+                // console.log(s);
+
+            // Prevent Object Mutation
+                // Example:
+                // function freezeObj(){
+                //     "use strict";
+
+                //     const MATH_CONSTANTS = {
+                //         PI: 3.14
+                //     };
+                //         Object.freeze(MATH_CONSTANTS)
+                //     try { // this is a try catch block
+                //         MATH_CONSTANTS.PI = 99;
+                //     } catch( ex ) {
+                //         console.log(ex);
+                //     }
+                //     return MATH_CONSTANTS.PI;
+                // }
+
+                // const PI = freezeObj();
+
+                // console.log(PI);
+
+            // Use arrow functions to write concise anonymous functions
+                // // From:
+                // let magic = function () => {
+                //     return new Date();
+                // };
+
+                // // To
+
+                // const myMagic = () => new Date();
+
+                // console.log(magic);
+
+            // Write arrow function with parameters
+                // Example:
+                // const myConcat = (arr1, arr2) =>  arr1.concat(arr2);
+
+                // console.log(myConcat([1,2],[3,4,5]));
+            
+            // Write higher order arrow functions
+            // -> Whenever one function takes another function as an argument, that's a good time for an arrow function.
+                // Example:
+                // const realNumberArray = [4,5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+                
+                // const squareList = (arr) => {
+                //     const squaredIntegers = arr.filter(num => Number.isInteger(num) && num > 0).map(x => x * x); // Filtering only whole numbers that is more than 0.
+                //     return squaredIntegers;
+                // }
+
+                // const squaredIntegers = squareList(realNumberArray);
+                // console.log(squaredIntegers);
+            
+            // -> Using default parameters, a default parameter kicks in when the argument is not specified or is undefined.
+                // const increment = (function () {
+                //     return function increment(number, value = 1){
+                //         return number + value;
+                //     };
+                // })();
+
+                // console.log(increment(10,2));
+                // console.log(increment(10));
+
+            // Use the rest operator with function parameters
+            // -> using ... dots
+            // -> REST operator allows you to create a function that takes a variable number of arguments.
+                    // // Example from :
+                    // const sum = (function(){
+                    //     return function sum(x,y,z){
+                    //         const args = [x,y,z];
+                    //         return args.reduce((a,b) => a + b, );
+                    //     };
+
+                    // })();
+
+                    // console.log(sum(1,2,3));
+
+
+                    // // Example to
+                    // const sum = (function(){
+                    //     return function sum(...args){ // ... is the rest operator
+                    //         return args.reduce((a,b) => a + b, );
+                    //     };
+
+                    // })();
+
+                    // console.log(sum(1,2,3,4));
+
+            // Use the spread operator to evaluate arrays in-place
+            // -> It spreads out an array. 
             // Example:
-                    function printManyTimes(str){
-                        "use strict";
+                    // const arr1 = ['JAN','FEB','MAR','APR', 'MAY'];
+                    // let arr2;
+                    // (function () {
+                    //     arr2 = [...arr1];
+                    //     arr1[0] = 'potato'
+                    // })();
+                    // console.log(arr2);
 
-                    var sentence = str + " this is cool!";
-
-                    sentence = str + " is amazing!"
-
-                    for (var i = 0; i < str.lenght; i+=2){
-                        console.log(sentence);
-                    }
-
-                    }
-                    printManyTimes("Freecodecamp");
-                    console.log(printManyTimes());
-
-
-// continue on "2:32:00"
+// continue on "2:57:18"
 // referenca:
 // https://www.youtube.com/watch?v=PkZNo7MFNFg&t=367bd
