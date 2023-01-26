@@ -1969,7 +1969,67 @@
                     // const vegetable = makeClass();
                     // const carrot = new makeClass('carrot');
                     // console.log(carrot.name);
-            
+
+            // Use getter and setter to control access to an object
+            // -> With the  class object you often want to obtain values from the object and set a value of a property within an object.
+            // -> getter function are meant to simple return or get the value of an object's private variable to the user.
+                // // Example:
+                //     class Book {
+                //         constructor(author){
+                //             this._author = author; // ._author is only accesible within this class here (_privateVariable)
+                //         }
+                //         // getter
+                //         get writer(){
+                //             return this._author;
+                //         }
+                //         // setter
+                //         set writer(updatedAuthor){
+                //             this._author = updatedAuthor;
+                //         }
+                //     }
+
+                // // Another example:
+                //     function makeClass(){
+                //         class Thermostat {
+                //             constructor(temp){
+                //                 this._temp = 5/9 * (temp -32);
+                //             }
+                //             get temperature(){ // 
+                //                 return this._temp;
+                //             }
+                //             set temperature(updatedTemp){
+                //                 this._temp = updatedTemp;
+                //             }
+                //         }
+                //         return Thermostat;
+                //     }
+
+                //     const Thermostat = makeClass(); // this will return Thermostat class object
+                //     const thermos = new Thermostat(76); // Instantiating and passing 76 that goes to the constructor (temp) then goes to the calculations that convert it from fahrenheit to the celsius
+                //     let temp = thermos.temperature; // thermos.tempreature is going to use the getter and return the private this._temp.
+                //     thermos.temperature = 26; // Sets with new updated temperature
+                //     temp = thermos.temperature; // this is the new class with the value
+                //     console.log(temp);
+
+            // Understand the differences between import and require
+            // -> Import
+            // -> Export
+                // Example:
+            // import { capitalizeString } from "./string_function";
+            // const cap = capitalizeString("Hello!");
+
+            //         console.log(cap);
+
+            const capitalizeString = (string) => {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            }
+
+            export { capitalizeString };
+
+            export const foo = "bar";
+            export const bar = "foo";
+
+            console.log(capitalizeString);
 
 // continue on "3:15:00"
 // referenca:
