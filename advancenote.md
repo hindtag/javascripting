@@ -74,9 +74,68 @@ Data Types:
         console.log("Every good boy does fine".split(" ")); Output is  ['Every', 'good', 'boy', 'does', 'fine']
 
 
-| Numbers 
+| Numbers
+    Warning:
+        NAN = Not a number
+    Note:
+        An integer is a whole number.
+            Example: 42.
 
-Continue on "22:17"
+        A number with a decimal point is a float which references the floating point.
+            Example: 42.
+
+            More example:
+            const myNumber = 42;
+            const myFloat1 = 42.00;
+            const myFloat2 = 42.01;
+            const myString = "42"; //This is string data type
+
+            console.log(myNumber === myFloat1); // Output is true
+            console.log(myNumber === myFloat2); // Output is false
+            console.log(myNumber == myString); // Output is false
+
+            console.log(myString + 3); // Output is 423
+            console.log(Number(myString)); // Converting string to number, this output 42
+            console.log(Number(myString) === myNumber); // Output is true
+
+            console.log(Number(false)); // Output is 0
+            console.log(Number(true)); // Output is 1
+            console.log(Number("FirstName")); // NaN
+            console.log(Number(undefined)); // NaN
+
+
+    || Number methods
+    
+    Use Number.isInteger() to determine wheter the passed value us an integer.
+        Example:
+        const myNumber = 42;
+        const myFloat1 = 42.00;
+        const myFloat2 = 42.01;
+        const myString = "42";
+
+        console.log(Number.isInteger(myNumber)); // True
+        console.log(Number.isInteger(myFloat1)); // True
+        console.log(Number.isInteger(myFloat2)); // False
+        console.log(Number.isInteger(myString)); // False
+
+    Use Number.parseFloat() parses an argument and returns a floating point number. if a number cannot be parsed from the argument, it returns NaN.
+
+        Example:
+        const myNumber = 42;
+        const myFloat1 = 42.00;
+        const myFloat2 = 42.01;
+        const myString = "42";
+        const myString1 = "42asde"; // alphanumeric
+
+        console.log(Number.parseFloat(myNumber)); // 42
+        console.log(Number.parseFloat(myFloat1)); // 42
+        console.log(Number.parseFloat(myFloat2)); // 42.1
+        console.log(Number.parseFloat(myString)); // 42
+        console.log(Number.parseFloat(myString1)); // 42
+
+    Use of 
+
+Continue on "26:00"
 
 Resources:
     String methods
