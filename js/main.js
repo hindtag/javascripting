@@ -21,6 +21,7 @@ console.log("Every good boy does fine".split(" "));
 
 End of String */
 
+/* 
 // Numbers
 const myNumber = 42;
 const myFloat1 = 42.00;
@@ -62,6 +63,45 @@ console.log(Number.parseFloat("4.237abc").toFixed(2).toString()); // 4.24
 // NAN
 
 console.log(Number.isNaN("dave")); // False
-console.log(isNaN("dave")); // True
+console.log(isNaN("dave")); // True 
+
+More example:
+
+console.log(Math.PI); // Output is 3.141592653589793
+console.log(Math.trunc(Math.PI)); // Output is 3
+console.log(Math.round(3.4)); // Output is 3
+console.log(Math.round(3.5)); // Output is 4
+console.log(Math.ceil(3.4)); // Output is 4 // Always round up
+console.log(Math.floor(3.4)); // Output is 3 // Always round down
+console.log(Math.pow(2, 4)); // Output is 16 // 2 to the power of 4
+
+console.log(Math.min(2, 5)); // Output is 2 // Returns the smallest
+console.log(Math.max(2, 5)); // Output is 5 // Returns the largest
+console.log(Math.random()); // Output RANDOM numbers.
+
+// Generating a random numbers from 1- 10
+console.log(Math.floor(Math.random() * 10) +1 );
+
+End of Math methods*/
+
+/* // Write a code that will generate a random letter from your name
+console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+
+// Create a code that will generate a random letter for any name.
+
+const anyName = "Jonathan"
+
+console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+
+End of coding challenge*/
 
 

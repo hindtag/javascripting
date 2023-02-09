@@ -171,13 +171,66 @@ Data Types:
         Example:
         console.log(Number.isNaN("dave")); // False
 
-        || Flobal isNan determines wheter a value is NaN or not.
+        ||| Global isNan determines wheter a value is NaN or not.
             
             console.log(isNaN("dave")); // True
 
-Continue on "27:00"
+    || Math Methods
+    
+    console.log(Math.PI); // Output is 3.141592653589793
+
+    ||| Trunc
+    console.log(Math.trunc(Math.PI)); // Output is 3
+    
+    ||| Round
+    console.log(Math.round(3.4)); // Output is 3
+    console.log(Math.round(3.5)); // Output is 4
+
+    ||| Ceil
+    console.log(Math.ceil(3.4)); // Output is 4 // Always round up
+
+    ||| Floor
+    console.log(Math.floor(3.4)); // Output is 3 // Always round down
+
+    ||| Pow
+    console.log(Math.pow(2, 4)); // Output is 16 // 2 to the power of 4
+
+    ||| Min
+    console.log(Math.min(2, 5)); // Output is 2 // Returns the smallest
+
+    ||| Max
+    console.log(Math.max(2, 5)); // Output is 5 // Returns the largest
+
+    ||| Random
+        // Choose math.floor() not Math.ceil() to generate random number
+    console.log(Math.random()); // Output RANDOM floating numbers.
+    console.log(Math.floor(Math.random() * 10) +1 ); // Output RANDOM whole numbers.
+
+
+    // Write a code that will generate a random letter from your name
+        console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+        console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+        console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+        console.log("Mark".charAt(Math.floor(Math.random() * 4)));
+
+        // Create a code that will generate a random letter for any name.
+        const anyName = "Jonathan"
+
+        console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+        console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+        console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+        console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+        console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+        console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+        console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
+
+
+Continue on "40:00"
 
 
 Resources:
     String methods
         https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+    Math methods
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
