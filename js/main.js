@@ -23,4 +23,32 @@ End of String */
 
 // Numbers
 const myNumber = 42;
-console.log(myNumber);
+const myFloat1 = 42.00;
+const myFloat2 = 42.01;
+const myString = "42";
+const myString1 = "42asde";
+
+// console.log(myNumber == myFloat1);
+// console.log(myNumber == myFloat2);
+// console.log(myNumber == myString);
+// console.log(myString + 3);
+// console.log(Number(myString));
+// console.log(Number(myString) === myNumber);
+// console.log(Number(false));
+// console.log(Number(true));
+
+// console.log(Number.isInteger(myNumber)); // True
+// console.log(Number.isInteger(myFloat1)); // True
+// console.log(Number.isInteger(myFloat2)); // False
+// console.log(Number.isInteger(myString)); // False
+
+console.log(Number.parseFloat(myNumber)); // 42
+console.log(Number.parseFloat(myFloat1)); // 42
+console.log(Number.parseFloat(myFloat2)); // 42.1
+console.log(Number.parseFloat(myString)); // 42
+console.log(Number.parseFloat(myString1)); // 42
+
+
+
+
+
