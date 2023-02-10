@@ -225,7 +225,17 @@ Data Types:
         console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
 
 
-Continue on "40:00"
+|| Conditionals : If Statements
+    Note: Let you make decisions within your code based upon the current state of data.
+
+    // Syntax
+    if (condition) {
+        // run some code if the condition is true, stop when false.
+    } else { // with else you can execute difference code when the above condition is false.
+    }
+
+
+Continue on "46:00"
 
 
 Resources:
