@@ -280,9 +280,12 @@ Data Types:
             prompt()
 
 <!-- Interactive Game -->
+Rock paper scissor
 
 
-Continue on "1:12:00"
+
+
+Continue on "1:20:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 

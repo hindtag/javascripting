@@ -104,87 +104,85 @@ console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
 
 End of coding challenge*/
 
-
 // Conditionals: If Statements
-    /* || Syntax
+/* || Syntax
     if (condition) {
         // run some code if the condition is true, stop when false.
     } else { // with else you can execute difference code when the above condition is false.
     }
     */
-    // Example using order:
+// Example using order:
 
-    // let customerIsBanned = false;
-    // let soup = "chicken noodle soup";
-    // let crackers = true;
-    // let reply;
+// let customerIsBanned = false;
+// let soup = "chicken noodle soup";
+// let crackers = true;
+// let reply;
 
-    // if (customerIsBanned) {
-    //     reply = `No soup for you!`
-    // }else if (soup && crackers) {
-    //     reply = `her's your order of ${soup} & crackers`
-    // }else if (soup) {
-    //     reply = `here's your order of ${soup}`
-    // }else{
-    //     reply = `Sorry, we're out of soup.`
-    // };
+// if (customerIsBanned) {
+//     reply = `No soup for you!`
+// }else if (soup && crackers) {
+//     reply = `her's your order of ${soup} & crackers`
+// }else if (soup) {
+//     reply = `here's your order of ${soup}`
+// }else{
+//     reply = `Sorry, we're out of soup.`
+// };
 
-    // console.log(reply); // here's your order of chicken noodle soup & crackers
+// console.log(reply); // here's your order of chicken noodle soup & crackers
 
-    // Another Example using test score:
-    // let testScore = 59;
-    // let collegeStudent = true;
-    // let grade;
+// Another Example using test score:
+// let testScore = 59;
+// let collegeStudent = true;
+// let grade;
 
-    // if (testScore >= 90) {
-    //     grade = "A";
-    // } else if (testScore >= 80) {
-    //     grade = "B";
-    // } else if (testScore >= 70) {
-    //     grade = "C";
-    // } else if (testScore >= 60) {
-    //     grade = "D";
-    // } else {
-    //     if (collegeStudent){
-    //         grade = "U"
-    //     } else {
-    //         grade = "F"
-    //     }
-    // };
-    // console.log(grade); // Output is U
+// if (testScore >= 90) {
+//     grade = "A";
+// } else if (testScore >= 80) {
+//     grade = "B";
+// } else if (testScore >= 70) {
+//     grade = "C";
+// } else if (testScore >= 60) {
+//     grade = "D";
+// } else {
+//     if (collegeStudent){
+//         grade = "U"
+//     } else {
+//         grade = "F"
+//     }
+// };
+// console.log(grade); // Output is U
 
-    // Decision tree!
-    // let playerOne = "paper";
-    // let computer = "rock";
-    // let result;
+// Decision tree!
+// let playerOne = "paper";
+// let computer = "rock";
+// let result;
 
-    // if (playerOne === computer) {
-    //     result = "tie game!";
-    // } else if (playerOne === "rock") {
-    //     if (computer === "paper"){
-    //         result = "Computer wins";
-    //     } else {
-    //         result = "Player One wins";
-    //     }
-    // } else if (playerOne === "paper") {
-    //     if (computer === "scissor"){
-    //         result = "Computer wins";
-    //     } else {
-    //         result = "Player One wins";
-    //     }
-    // } else {
-    //     if (computer === "rock"){
-    //         result = "Computer wins";
-    //     } else {
-    //         result = "Player One wins";
-    //     }
-    // }
-    // console.log(result);
+// if (playerOne === computer) {
+//     result = "tie game!";
+// } else if (playerOne === "rock") {
+//     if (computer === "paper"){
+//         result = "Computer wins";
+//     } else {
+//         result = "Player One wins";
+//     }
+// } else if (playerOne === "paper") {
+//     if (computer === "scissor"){
+//         result = "Computer wins";
+//     } else {
+//         result = "Player One wins";
+//     }
+// } else {
+//     if (computer === "rock"){
+//         result = "Computer wins";
+//     } else {
+//         result = "Player One wins";
+//     }
+// }
+// console.log(result);
 
-
-    // || Switch Statements
-    // Checks an expression or value and then takes a waterfall shape to check possible cases.
-        /* Syntax
+// || Switch Statements
+// Checks an expression or value and then takes a waterfall shape to check possible cases.
+/* Syntax
         switch (expression OR) {
             case choice1:
                 // Run this code.
@@ -197,98 +195,98 @@ End of coding challenge*/
                 break;
         } */
 
-        // // Example
-        // switch (2) {
-        //     case 1:
-        //         console.log(1);
-        //         break;
-        //     case 2:
-        //         console.log(2);
-        //         break;
-        //     case 3:
-        //         console.log(3);
-        //         break;
-        
-        //     default:
-        //         console.log(`No match`);
-        // } // Output is 2
+// // Example
+// switch (2) {
+//     case 1:
+//         console.log(1);
+//         break;
+//     case 2:
+//         console.log(2);
+//         break;
+//     case 3:
+//         console.log(3);
+//         break;
 
-        // // Another example:
-        // switch (Math.floor(Math.random()* 3 + 1 )) {
-        //     case 1:
-        //         console.log(1);
-        //         break;
-        //     case 2:
-        //         console.log(2);
-        //         break;
-        //     case 3:
-        //         console.log(3);
-        //         break;
-        
-        //     default:
-        //         console.log(`No match`);
-        // }
+//     default:
+//         console.log(`No match`);
+// } // Output is 2
 
-        // // Another example using switch for rock paper scissor:
+// // Another example:
+// switch (Math.floor(Math.random()* 3 + 1 )) {
+//     case 1:
+//         console.log(1);
+//         break;
+//     case 2:
+//         console.log(2);
+//         break;
+//     case 3:
+//         console.log(3);
+//         break;
 
-        // let playerOne = "rock";
-        // let computer = "paper"
+//     default:
+//         console.log(`No match`);
+// }
 
-        // switch (playerOne) {
-        //     case computer:
-        //         console.log(`Tie game`);
-        //         break;
-        //     case "rock":
-        //         if (computer === "paper") {
-        //             console.log(`Computer wins`);
-        //         } else {
-        //             console.log(`Player One wins`);
-        //         }
-        //         break
-        //     case "paper":
-        //         if (computer === "scissor") {
-        //             console.log(`Computer wins`);
-        //         } else {
-        //             console.log(`Player One wins`);
-        //         }
-        //         break
-        //     default:
-        //         if (computer === "rock") {
-        //             console.log(`computer wins`);
-        //         } else {
-        //             console.log(`Player one wins`);
-        //         }
-        // }
+// // Another example using switch for rock paper scissor:
 
-    // || Ternary Operator
-    // Example:
-    // let soup = "Chicken soup"
-    // let isCustomerBanned = false;
-    // let response = soup ? "yes, we have soup" : "Sorry, no soup today";
-    // console.log(response); // Output is Sorry, no soup today since there has no value inside the variable soup // else, put a value on variable soup.
-    
-    // let soupAccess = isCustomerBanned ? "Sorry, no soup for you!" : soup ? `Yes we have ${soup} today.` : "sorry, no soup today";
-    // console.log(soupAccess); //If isCustomerBanned is true the output is Sorry, no soup for you!
+// let playerOne = "rock";
+// let computer = "paper"
 
-    // // Another example:
-    // let testScore = 40;
-    // let myGrade = testScore > 89 ? "Flat A" : testScore > 79 ? "Flat B" : testScore > 69 ? "Flat C" : testScore > 59 ? "Flat D" : "Flat F";
+// switch (playerOne) {
+//     case computer:
+//         console.log(`Tie game`);
+//         break;
+//     case "rock":
+//         if (computer === "paper") {
+//             console.log(`Computer wins`);
+//         } else {
+//             console.log(`Player One wins`);
+//         }
+//         break
+//     case "paper":
+//         if (computer === "scissor") {
+//             console.log(`Computer wins`);
+//         } else {
+//             console.log(`Player One wins`);
+//         }
+//         break
+//     default:
+//         if (computer === "rock") {
+//             console.log(`computer wins`);
+//         } else {
+//             console.log(`Player one wins`);
+//         }
+// }
 
-    // console.log(`My test grade is a ${myGrade}`);
+// || Ternary Operator
+// Example:
+// let soup = "Chicken soup"
+// let isCustomerBanned = false;
+// let response = soup ? "yes, we have soup" : "Sorry, no soup today";
+// console.log(response); // Output is Sorry, no soup today since there has no value inside the variable soup // else, put a value on variable soup.
 
-    // // Another example:
-    // let playerOne = "paper";
-    // let computer = "scissor";
-    // let result = playerOne === computer ? "Tie game" : playerOne === "rock" && computer === "paper" ? "Computer wins" : playerOne === "paper" && computer === "scissor" ? "Computer wins" : playerOne === "scissor" && computer === "rock" ? "Computer wins" : "player one wins!"
+// let soupAccess = isCustomerBanned ? "Sorry, no soup for you!" : soup ? `Yes we have ${soup} today.` : "sorry, no soup today";
+// console.log(soupAccess); //If isCustomerBanned is true the output is Sorry, no soup for you!
 
-    // console.log(result);
+// // Another example:
+// let testScore = 40;
+// let myGrade = testScore > 89 ? "Flat A" : testScore > 79 ? "Flat B" : testScore > 69 ? "Flat C" : testScore > 59 ? "Flat D" : "Flat F";
+
+// console.log(`My test grade is a ${myGrade}`);
+
+// // Another example:
+// let playerOne = "paper";
+// let computer = "scissor";
+// let result = playerOne === computer ? "Tie game" : playerOne === "rock" && computer === "paper" ? "Computer wins" : playerOne === "paper" && computer === "scissor" ? "Computer wins" : playerOne === "scissor" && computer === "rock" ? "Computer wins" : "player one wins!"
+
+// console.log(result);
 
 // || User Input
-    // Pop out
-    //alert("Hello world"); // Pop up dialog box with Hello world
-    
-    // let myBoolean = confirm("ok === True\nCancel === False");
-    // console.log(myBoolean); // Log data on console for the myBoolean value.
+// Pop out
+//alert("Hello world"); // Pop up dialog box with Hello world
+
+// let myBoolean = confirm("ok === True\nCancel === False");
+// console.log(myBoolean); // Log data on console for the myBoolean value.
 
 /* let myName = prompt("Please enter your name.");
 if (myName) {
@@ -301,23 +299,46 @@ console.log("You didnt enter your name.");
 } */
 
 // Interactive game
-let playGame = confirm("Shall we play rock, paper, or scissor");
+/* let playGame = confirm("Shall we play game called - rock, paper, or scissor?");
 if (playGame) {
-    //play
-    let playerChoice = prompt("Please enter rock, paper or scissor");
-    if (playerChoice) {
-        let playerOne = playerChoice.trim().toLowerCase();
-        if (playerOne === "rock" || playerOne === "paper" || playerOne === "scissor") {
-            
-            let computerChoice = Math.floor(Math.random() * 3 + 1);
-            let computer = computerChoice === 1 ? "rock" : computerChoice === 2 ? "paper" : "scissor"
-            let result = playerOne === computer ? "Tie game!" : playerOne === "rock" && computer === "paper" ? "Computer wins" : playerOne === "paper" && computer === "scissor" ? "Computer wins" : playerOne === "scissor" && computer === "rock" ? "Computer wins" : "player one wins!"
-        } else{
-            alert("Invalid input");
-        }
+  //play
+  let playerChoice = prompt("Please enter rock, paper or scissor");
+  if (playerChoice) {
+    let playerOne = playerChoice.trim().toLowerCase();
+    if (
+      playerOne === "rock" ||
+      playerOne === "paper" ||
+      playerOne === "scissor"
+    ) {
+      let computerChoice = Math.floor(Math.random() * 3 + 1);
+      let computer =
+        computerChoice === 1
+          ? "rock"
+          : computerChoice === 2
+          ? "paper"
+          : "scissor";
+
+      let result =
+        playerOne === computer
+          ? "Tie game!"
+          : playerOne === "rock" && computer === "paper"
+          ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins!`
+          : playerOne === "paper" && computer === "scissor"
+          ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins!`
+          : playerOne === "scissor" && computer === "rock"
+          ? `playerOne: ${playerOne}\nComputer: ${computer}\nComputer wins!`
+          : "player one wins!";
+      alert(result);
+      let playAgain = confirm("Play Again?");
+      playAgain ? location.reload() : alert("okay, thanks for playing");
     } else {
-        alert("I guess you changed your mind. Maybe next time.")
+      alert("Invalid input");
     }
-}else{
-    alert("Okay, maybe next time.")
+  } else {
+    alert("I guess you changed your mind. Maybe next time.");
+  }
+} else {
+  alert("Okay, maybe next time.");
 }
+
+END OF INTERACTIVE GAME*/
