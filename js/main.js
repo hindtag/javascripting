@@ -342,3 +342,131 @@ if (playGame) {
 }
 
 END OF INTERACTIVE GAME*/
+
+// | Loops
+
+// || While loop
+// let myNumber = 0;
+// while (myNumber < 50) {
+//   myNumber += 2;
+//   console.log(myNumber);
+// }
+
+// || Do while
+// let myNumber = 50;
+// do {
+//   myNumber += 2;
+//   console.log(myNumber);
+// } while (myNumber < 50)
+// let name = "Tag";
+// let counter = 0;
+// let myLetter;
+// while (counter <=3) {
+//   myLetter = name[counter];
+//   console.log(myLetter);
+//   if (counter === 1){
+//     counter += 2;
+//     continue;
+//   }
+//   if (myLetter === "a") break;
+//   counter++;
+// };
+// console.log(counter);
+
+// || for loops
+// for (i=0; i <= 10 ; i++){
+//   console.log(i);
+// }
+
+// Example of loop
+// let name = "tag"
+// for (i=0; i <= name.length ; i++){
+//   console.log(name.charAt(i));
+// }
+
+// | Functions
+// || Methods
+
+// Function Declaration Syntax:
+
+// function sum(num1, num2) {
+//   if (num2 === undefined){
+//     return num1 + num1
+//   }
+//   return num1 + num2;
+// }
+// console.log(sum(2, 10)); // Output is 15
+
+// // Reusable function
+// function getUserNameFromEmail(email) {
+//   return email.slice(0, email.indexOf("@"));
+// }
+// console.log(getUserNameFromEmail("playerrandom@email.com")); // Output is playerrandom
+
+// Anonymous function
+// const getUserNameFromEmail = function (email) {
+//   return email.slice(0, email.indexOf("@"));
+// }
+// console.log(getUserNameFromEmail("playerrandom@email.com")); // Output is playerrandom
+
+// Arrow functions
+
+// const getUserNameFromEmail = (email) => {
+//   return email.slice(0, email.indexOf("@"));
+// }
+// console.log(getUserNameFromEmail("playerrandom@email.com")); // Output is playerrandom
+
+// const toProperCase = (name) => {
+//   return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase(); // This is the declaration.
+// }
+
+// console.log(toProperCase("BiRoN")); // By using chartAt and slice the Output is Biron.
+
+
+// global scope
+// var x = 1; // function scoped
+// let y = 2; // block scoped
+// const z = 3;
+
+// console.log(`global: ${x}`);
+// console.log(`global: ${y}`);
+// console.log(`global: ${z}`);
+
+// function myFunc(params) {
+//   var x = 10;
+//   const z = 5;
+//   console.log(`function: ${x}`);
+//   console.log(`function: ${y}`);
+//   console.log(`function: ${z}`);
+
+//   {
+
+//     var x =11;
+//     const z = 6;
+//     console.log(`block: ${x}`);
+//     console.log(`block: ${y}`);
+//     console.log(`block: ${z}`);
+//   }
+// }
+
+// console.log(myFunc());
+
+
+// Arrays
+const myArray = [];
+
+// Add elements to an array
+myArray[0] = "Tag";
+myArray[1] = 0905;
+myArray[2] = false;
+
+myArray.push("School")
+
+// Refer to an array
+console.log(myArray);
+console.log(myArray.length);
+
+// The last element in an array
+console.log(myArray[myArray.length - 2]);
+console.log(myArray[1]);
+

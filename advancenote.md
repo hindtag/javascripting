@@ -283,9 +283,106 @@ Data Types:
 Rock paper scissor
 
 
+| Loops
+        || While loop
+
+            let myNumber = 0;
+            while (myNumber <50) {
+            console.log(myNumber);
+            myNumber = myNumber + 1;
+            }
+
+            is the same as 
+
+            let myNumber = 0;
+            while (myNumber <50) {
+            console.log(myNumber);
+            myNumber++;
+            }
+
+        || Do while loop - The only difference is it will execute atleast once.
+            let myNumber = 50;
+            do {
+            myNumber += 2;
+            console.log(myNumber); // Output is 52
+            } while (myNumber < 50)
+
+        || For Loop -  best for counting and indexing
 
 
-Continue on "1:20:00"
+| Functions
+        
+        || Note: Methods is a built in functions
+            example:
+                "Tag".toLocaleLowerCase();
+                Math.random();
+
+        // Function Declaration Syntax:
+            function sum(num1, num2) {
+            return num1 + num2;
+            }
+            console.log(sum(2, 2)); // output is 4
+
+
+        // function sum(num1, num2) {
+           if (num2 === undefined){
+             return num1 + num1
+           }
+           return num1 + num2;
+           }
+           console.log(sum(2, 10)); // Output is 15
+
+        // Reusable function
+           function getUserNameFromEmail(email) {
+             return email.slice(0, email.indexOf("@"));
+           }
+           console.log(getUserNameFromEmail("playerrandom@email.com")); // Output is playerrandom
+
+        // Anonymous function
+           const getUserNameFromEmail = function (email) {
+             return email.slice(0, email.indexOf("@"));
+           }
+           console.log(getUserNameFromEmail("playerrandom@email.com")); // Output is playerrandom
+
+        // Arrow functions
+           const getUserNameFromEmail = (email) => {
+             return email.slice(0, email.indexOf("@"));
+           }
+           console.log(getUserNameFromEmail("playerrandom@email.com")); // Output is playerrandom
+
+| Scope  
+    Tips:
+    Global = Not in a function or block. Not desirable.
+    Local = In a function or block. Not Global
+    Var = instantiates function() scoped variables
+    Let and const = intantiate block scoped variables.
+
+    Avoid using var. Stick with const and let.
+    Use const unless you need to reassign value.
+    Use let if you know you will reassign value.
+    
+        var x = 1; // function scoped
+        let y = 2; // block scoped
+        const z = 3;
+
+        console.log(`global: ${x}`);
+        console.log(`global: ${y}`);
+        console.log(`global: ${z}`);
+
+        function myFunc(params) {
+        console.log(`function: ${x}`);
+        console.log(`function: ${y}`);
+        console.log(`function: ${z}`);
+
+        {
+            console.log(`block: ${x}`);
+            console.log(`block: ${y}`);
+            console.log(`block: ${z}`);
+        }
+        }
+
+
+Continue on "2:10:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 
