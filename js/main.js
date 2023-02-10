@@ -197,65 +197,127 @@ End of coding challenge*/
                 break;
         } */
 
-        // Example
-        switch (2) {
-            case 1:
-                console.log(1);
-                break;
-            case 2:
-                console.log(2);
-                break;
-            case 3:
-                console.log(3);
-                break;
+        // // Example
+        // switch (2) {
+        //     case 1:
+        //         console.log(1);
+        //         break;
+        //     case 2:
+        //         console.log(2);
+        //         break;
+        //     case 3:
+        //         console.log(3);
+        //         break;
         
-            default:
-                console.log(`No match`);
-        } // Output is 2
+        //     default:
+        //         console.log(`No match`);
+        // } // Output is 2
 
-        // Another example:
-        switch (Math.floor(Math.random()* 3 + 1 )) {
-            case 1:
-                console.log(1);
-                break;
-            case 2:
-                console.log(2);
-                break;
-            case 3:
-                console.log(3);
-                break;
+        // // Another example:
+        // switch (Math.floor(Math.random()* 3 + 1 )) {
+        //     case 1:
+        //         console.log(1);
+        //         break;
+        //     case 2:
+        //         console.log(2);
+        //         break;
+        //     case 3:
+        //         console.log(3);
+        //         break;
         
-            default:
-                console.log(`No match`);
+        //     default:
+        //         console.log(`No match`);
+        // }
+
+        // // Another example using switch for rock paper scissor:
+
+        // let playerOne = "rock";
+        // let computer = "paper"
+
+        // switch (playerOne) {
+        //     case computer:
+        //         console.log(`Tie game`);
+        //         break;
+        //     case "rock":
+        //         if (computer === "paper") {
+        //             console.log(`Computer wins`);
+        //         } else {
+        //             console.log(`Player One wins`);
+        //         }
+        //         break
+        //     case "paper":
+        //         if (computer === "scissor") {
+        //             console.log(`Computer wins`);
+        //         } else {
+        //             console.log(`Player One wins`);
+        //         }
+        //         break
+        //     default:
+        //         if (computer === "rock") {
+        //             console.log(`computer wins`);
+        //         } else {
+        //             console.log(`Player one wins`);
+        //         }
+        // }
+
+    // || Ternary Operator
+    // Example:
+    // let soup = "Chicken soup"
+    // let isCustomerBanned = false;
+    // let response = soup ? "yes, we have soup" : "Sorry, no soup today";
+    // console.log(response); // Output is Sorry, no soup today since there has no value inside the variable soup // else, put a value on variable soup.
+    
+    // let soupAccess = isCustomerBanned ? "Sorry, no soup for you!" : soup ? `Yes we have ${soup} today.` : "sorry, no soup today";
+    // console.log(soupAccess); //If isCustomerBanned is true the output is Sorry, no soup for you!
+
+    // // Another example:
+    // let testScore = 40;
+    // let myGrade = testScore > 89 ? "Flat A" : testScore > 79 ? "Flat B" : testScore > 69 ? "Flat C" : testScore > 59 ? "Flat D" : "Flat F";
+
+    // console.log(`My test grade is a ${myGrade}`);
+
+    // // Another example:
+    // let playerOne = "paper";
+    // let computer = "scissor";
+    // let result = playerOne === computer ? "Tie game" : playerOne === "rock" && computer === "paper" ? "Computer wins" : playerOne === "paper" && computer === "scissor" ? "Computer wins" : playerOne === "scissor" && computer === "rock" ? "Computer wins" : "player one wins!"
+
+    // console.log(result);
+
+// || User Input
+    // Pop out
+    //alert("Hello world"); // Pop up dialog box with Hello world
+    
+    // let myBoolean = confirm("ok === True\nCancel === False");
+    // console.log(myBoolean); // Log data on console for the myBoolean value.
+
+/* let myName = prompt("Please enter your name.");
+if (myName) {
+    console.log(name.length);
+    console.log(name.trim().length);
+    console.log(name.trim());
+console.log(myName);
+} else {
+console.log("You didnt enter your name.");
+} */
+
+// Interactive game
+let playGame = confirm("Shall we play rock, paper, or scissor");
+if (playGame) {
+    //play
+    let playerChoice = prompt("Please enter rock, paper or scissor");
+    if (playerChoice) {
+        let playerOne = playerChoice.trim().toLowerCase();
+        if (playerOne === "rock" || playerOne === "paper" || playerOne === "scissor") {
+            
+            let computerChoice = Math.floor(Math.random() * 3 + 1);
+            let computer = computerChoice === 1 ? "rock" : computerChoice === 2 ? "paper" : "scissor"
+            let result = playerOne === computer ? "Tie game!" : playerOne === "rock" && computer === "paper" ? "Computer wins" : playerOne === "paper" && computer === "scissor" ? "Computer wins" : playerOne === "scissor" && computer === "rock" ? "Computer wins" : "player one wins!"
+        } else{
+            alert("Invalid input");
         }
-
-        // Another example using switch for rock paper scissor:
-
-        let playerOne = "rock";
-        let computer = "paper"
-
-        switch (playerOne) {
-            case computer:
-                console.log(`Tie game`);
-                break;
-            case "rock":
-                if (computer === "paper") {
-                    console.log(`Computer wins`);
-                } else {
-                    console.log(`Player One wins`);
-                }
-                break
-            case "paper":
-                if (computer === "scissor") {
-                    console.log(`Computer wins`);
-                } else {
-                    console.log(`Player One wins`);
-                }
-                break
-            default:
-                if (computer === "rock") {
-                    console.log(`computer wins`);
-                } else {
-                    console.log(`Player one wins`);
-                }
-        }
+    } else {
+        alert("I guess you changed your mind. Maybe next time.")
+    }
+}else{
+    alert("Okay, maybe next time.")
+}
