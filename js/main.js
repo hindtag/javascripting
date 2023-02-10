@@ -104,4 +104,79 @@ console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
 
 End of coding challenge*/
 
+// Conditionals: If Statements
+    /* || Syntax
+    if (condition) {
+        // run some code if the condition is true, stop when false.
+    } else { // with else you can execute difference code when the above condition is false.
+    }
+    */
+    // Example using order:
 
+    let customerIsBanned = false;
+    let soup = "chicken noodle soup";
+    let crackers = true;
+    let reply;
+
+    if (customerIsBanned) {
+        reply = `No soup for you!`
+    }else if (soup && crackers) {
+        reply = `her's your order of ${soup} & crackers`
+    }else if (soup) {
+        reply = `here's your order of ${soup}`
+    }else{
+        reply = `Sorry, we're out of soup.`
+    };
+
+    console.log(reply); // here's your order of chicken noodle soup & crackers
+
+    // Another Example using test score:
+    let testScore = 59;
+    let collegeStudent = true;
+    let grade;
+
+    if (testScore >= 90) {
+        grade = "A";
+    } else if (testScore >= 80) {
+        grade = "B";
+    } else if (testScore >= 70) {
+        grade = "C";
+    } else if (testScore >= 60) {
+        grade = "D";
+    } else {
+        if (collegeStudent){
+            grade = "U"
+        } else {
+            grade = "F"
+        }
+    };
+    console.log(grade); // Output is U
+
+    // Decision tree!
+    let playerOne = "paper";
+    let computer = "rock";
+    let result;
+
+    if (playerOne === computer) {
+        result = "tie game!";
+    } else if (playerOne === "rock") {
+        if (computer === "paper"){
+            result = "Computer wins";
+        } else {
+            result = "Player One wins";
+        }
+    } else if (playerOne === "paper") {
+        if (computer === "scissor"){
+            result = "Computer wins";
+        } else {
+            result = "Player One wins";
+        }
+    } else {
+        if (computer === "rock"){
+            result = "Computer wins";
+        } else {
+            result = "Player One wins";
+        }
+    }
+
+console.log(result);
