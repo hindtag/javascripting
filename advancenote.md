@@ -225,17 +225,167 @@ Data Types:
         console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
 
 
-|| Conditionals : If Statements
-    Note: Let you make decisions within your code based upon the current state of data.
+| Conditionals : If Statements
+        
+    || If Statements
 
-    // Syntax
-    if (condition) {
-        // run some code if the condition is true, stop when false.
-    } else { // with else you can execute difference code when the above condition is false.
-    }
+        Note: Let you make decisions within your code based upon the current state of data.
+
+        Syntax:
+        if (condition) {
+            // run some code if the condition is true, stop when false.
+        } else { // with else you can execute difference code when the above condition is false.
+        }
+
+        // Example using order:
+
+        let customerIsBanned = false;
+        let soup = "chicken noodle soup";
+        let crackers = true;
+        let reply;
+
+        if (customerIsBanned) {
+            reply = `No soup for you!`
+        }else if (soup && crackers) {
+            reply = `her's your order of ${soup} & crackers`
+        }else if (soup) {
+            reply = `here's your order of ${soup}`
+        }else{
+            reply = `Sorry, we're out of soup.`
+        };
+
+        console.log(reply); // here's your order of chicken noodle soup & crackers
+
+        // Another Example using test score:
+        let testScore = 59;
+        let collegeStudent = true;
+        let grade;
+
+        if (testScore >= 90) {
+            grade = "A";
+        } else if (testScore >= 80) {
+            grade = "B";
+        } else if (testScore >= 70) {
+            grade = "C";
+        } else if (testScore >= 60) {
+            grade = "D";
+        } else {
+            if (collegeStudent){
+                grade = "U"
+            } else {
+                grade = "F"
+            }
+        };
+        console.log(grade); // Output is U
+
+        // Decision tree for rock paper scissor!
+        let playerOne = "paper";
+        let computer = "rock";
+        let result;
+
+        if (playerOne === computer) {
+            result = "tie game!";
+        } else if (playerOne === "rock") {
+            if (computer === "paper"){
+                result = "Computer wins";
+            } else {
+                result = "Player One wins";
+            }
+        } else if (playerOne === "paper") {
+            if (computer === "scissor"){
+                result = "Computer wins";
+            } else {
+                result = "Player One wins";
+            }
+        } else {
+            if (computer === "rock"){
+                result = "Computer wins";
+            } else {
+                result = "Player One wins";
+            }
+        }
+        console.log(result);
+
+    || Switch statements
+        Checks an expression or value and then takes a waterfall shape to check possible cases.
+            Syntax: 
+            switch (expression OR) {
+                case choice1:
+                    Run this code.
+                    break;
+                case choice2:
+                    Run this different code.
+                    break;
+                add as many cases as needed.
+                default:
+                    break;
+            }
+            // Example
+            switch (2) {
+                case 1:
+                    console.log(1);
+                    break;
+                case 2:
+                    console.log(2);
+                    break;
+                case 3:
+                    console.log(3);
+                    break;
+            
+                default:
+                    console.log(`No match`);
+            } // Output is 2
+
+            // Another example:
+            switch (Math.floor(Math.random()* 3 + 1 )) {
+                case 1:
+                    console.log(1);
+                    break;
+                case 2:
+                    console.log(2);
+                    break;
+                case 3:
+                    console.log(3);
+                    break;
+            
+                default:
+                    console.log(`No match`);
+            }
+
+            // Another example using switch for rock paper scissor:
+
+            let playerOne = "rock";
+            let computer = "paper"
+
+            switch (playerOne) {
+                case computer:
+                    console.log(`Tie game`);
+                    break;
+                case "rock":
+                    if (computer === "paper") {
+                        console.log(`Computer wins`);
+                    } else {
+                        console.log(`Player One wins`);
+                    }
+                    break
+                case "paper":
+                    if (computer === "scissor") {
+                        console.log(`Computer wins`);
+                    } else {
+                        console.log(`Player One wins`);
+                    }
+                    break
+                default:
+                    if (computer === "rock") {
+                        console.log(`computer wins`);
+                    } else {
+                        console.log(`Player one wins`);
+                    }
+                }
 
 
-Continue on "46:00"
+
+Continue on "49:00"
 
 
 Resources:
