@@ -381,8 +381,25 @@ Rock paper scissor
         }
         }
 
+| Array
+        // Using method to manipulate
+        .push = Add to the last.
+        .pop = remove last.
+        .unshift = adding to the beginning.
+        .shift = removing the first from the beggining.
+        .splice = used to delete or replace in the middle.
+            (start, end, insert) ex. .splice(1,0, 32)
+        .split = used to divide the string with a comma
+            ex. "How are you today?" to ["How", "are", "you", "today?"]
+        .slice = used to extract a section of a string and return it as a new string.
+            ex. let str = "Hello, World!";
+                let sliced = str.slice(7, 12);
+                output is "World"
+        .concat = used in joining two existing array
+        ... aka spread operator using 
+        [] Use bracket notation to access nested array.
 
-Continue on "2:10:00"
+Continue on "3:12:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 
