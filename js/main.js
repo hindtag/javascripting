@@ -639,7 +639,7 @@ End of rock paper function refactor */
 //   }
 // };
 
-// const truck = Object.create(vehicle);
+// const truck = Object.create(vehicle); // Constructor with inheritance.
 // truck.doors = 2;
 // console.log(truck);
 // console.log(truck.wheels); // Inheritance
@@ -660,14 +660,15 @@ End of rock paper function refactor */
 //   drums: "John Bonham"
 // };
 
+// Deleting
 // delete band.drums; // Delete pair value key "drums: "John Bonham"
-// console.log(band.hasOwnProperty("drums"));
+// console.log(band.hasOwnProperty("drums")); // Will return boolean.
 
 // console.log(Object.keys(band)); // Output ['vocals', 'guitar', 'bass', 'drums']
 // console.log(Object.values(band)); // Output ['Robert Plant', 'Jimmy page', 'Jon Paul Jones', 'John Bonham']
 
 // for (let job in band){
-//   console.log(`On ${job}, it's ${band[job]}`);
+//   console.log(`On ${job}, it's ${band[job]}`); // Will output key value pairs.
 // };
 
 /*Output are:
@@ -677,7 +678,7 @@ main.js:667 On bass, it's Jon Paul Jones
 main.js:667 On drums, it's John Bonham
 */
 
-// destructuring object
+// destructuring object for this object
 const band = {
   vocals: "Robert Plant",
   guitar: "Jimmy page",
@@ -685,8 +686,18 @@ const band = {
   drums: "John Bonham"
 };
 
-const { vocals: myVocals, guitar: myGuitar, bass:myBass, drums: myDrums } = band; //Defining myvariable and pulling of key guitar out of the object.
-console.log(myVocals); // Output is Robert Plant
-console.log(myGuitar); // Output is Jimmy page
-console.log(myBass); // Output is Jon Paul Jones
-console.log(myDrums); // Robert Plant
+// This is the correct destructuting
+const {vocals, guitar, bass, drums} = band; // creating a 4 new variable with inheritance.
+// console.log(vocals); // Output is Robert Plant
+// console.log(guitar); // Output is Jimmy page
+// console.log(bass); // Output is Jon Paul Jones
+
+// This is much cooler in destructuring with function.
+function sings({ vocals }) {return `${vocals} sings!`}; // Creating a function for the object.
+console.log(sings(band)); // Output is Robert Plant sings!
+
+/*
+Explanation:
+line 695 (inside) tells for {vocals} after the object "I expect a value from vocals coming out of an object".
+line 695 second part {} tells fron this function return this.
+*/

@@ -399,7 +399,19 @@ Rock paper scissor
         ... aka spread operator using 
         [] Use bracket notation to access nested array.
 
-Continue on "3:12:00"
+| Objects
+        // Inheritance
+                Need note Log here.
+        // Constructor
+                Object.create used to create a new object with inheritance
+        // Deleting
+                Need note Log here.
+        // Deconstructing
+                Need note log here.
+
+        For in loop is used in an object.
+
+Continue on "3:14:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 
