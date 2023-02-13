@@ -836,6 +836,7 @@ myPizza.bake(); */
 // // Note, You can still access the public field
 // console.log(myPizza.getCrust());
 
+/*
 // || JSON
 const myObj = {
   name: "Dave",
@@ -859,3 +860,39 @@ console.log(typeof sendJSON); // This is now string
 const recieveJSON = JSON.parse(sendJSON); // Parse is a method to deconstruct a JSON format
 console.log(recieveJSON); // Output is Object format {name: 'Dave', hobbies: Array(3)}
 console.log(typeof recieveJSON); // This is object again
+*/
+
+// | Errors and Error handling
+"use strict"; // use to enforce some of javascript rules.
+
+// const makeError = () => {
+//   try {
+//     const name = "Dave";
+//     name = "Joe";
+//   } catch (err) {
+//     console.error(err); // Used to log the real error
+//     console.log(err.name); // Type error only
+//     console.log(err.message); // message only.
+//     console.error(err.stack); // detailed
+//     logTheError(err.stack);
+//   }
+// };
+// makeError();
+
+// Creating a custom error
+const iHaveError = () => {
+  try {
+    throw new customError("This is a custom Error");
+  } catch (err) {
+    console.error(err.name);
+    console.error(err.message);
+    console.error(err.stack);
+  }
+}
+iHaveError();
+
+function customError(message){
+  this.message = message;
+  this.name = "customError";
+  this.stack = `${this.name}: ${this.message}`;
+}

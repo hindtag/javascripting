@@ -423,7 +423,19 @@ Rock paper scissor
         // Stringify = method used to format from object to JSON.
         // Parse = method used to format from JSON to an object.
 
-Continue on "3:14:00"
+| Errors and error handling
+        reference error = common error such as variable not defined.
+        syntax error = can't catch and fix.
+        type error = common error example assigning/re:assigning a variable.
+        
+        .error method used to console a danger error
+            // try
+            // catch
+            // throw
+        .warn used to console a warning error
+        .table used to console a table error that are more detailed.
+
+Continue on "4:00:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 
