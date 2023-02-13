@@ -724,28 +724,114 @@ line 695 second part {} tells fron this function return this.
 
 
 // The proper way to change a value is using a getters and setters
-// Using the example above
+// Creating a class Using the example above (version 1)
+// class Pizza {
+//   constructor(pizzaType, pizzaSize, pizzaCrust,){
+//     this.type = pizzaType;
+//     this.size = pizzaSize;
+//     this.crust = pizzaCrust;
+//     this.toppings = [];
+//   }
+//   getCrust(){ // This is creating a method for crust
+//     return this.crust;
+  
+//   }
+//   setCrust(pizzaCrust){ // Setting the crust with parameter (pizzaCrust)
+//     this.crust = pizzaCrust;
+//   }
+//   getToppings(){
+//     return this.toppings;
+//   }
+//   setToppings(topping){
+//     this.toppings.push(topping);
+//   }
+//   bake(){
+//     console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+//   }
+// }
 
-class Pizza {
-  constructor(pizzaType, pizzaSize, pizzaCrust){
-    this.type = pizzaType;
-    this.size = pizzaSize;
-    this.crust = pizzaCrust;
-  }
-  get pizzaCrust(){ // This is creating a method for crust
-    return this.crust;
-  }
-  set pizzaCrust(pizzaCrust){ // Setting the crust with parameter (pizzaCrust)
-    this.crust = pizzaCrust;
-  }
-  bake(){
-    console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+// const myPizza = new Pizza("peperoni", "small", "thin");
+// myPizza.setCrust("thicc"); // This is setting the value passed by the getter and setter
+// myPizza.bake()
+// myPizza.setToppings("sausage");
+// myPizza.setToppings("olives");
+// console.log(myPizza.getToppings()); // Returning the updated pizzaCrust value for "Thick" using method again - Much cleaner
+
+// // Creating a parent class (version 2)
+// class Pizza { // This is the super class / parent class and used this as a blue print.
+//   constructor(pizzaSize){ // This constructor expects size (code below)
+//     this._size = pizzaSize; // Intended as private and should not be modified outside the class.
+//     this._crust = "original"; // Intended as private and should not be modified outside the class.
+//   }
+//   getCrust(){ 
+//     return this._crust;
+  
+//   }
+//   setCrust(pizzaCrust){ 
+//     this._crust = pizzaCrust;
+//   }
+// }
+
+// class mediumSpecialtyPizza extends Pizza { // This is a child class using extends
+//   constructor(pizzaSize){
+//     super(pizzaSize) // calling the constructor of the parent class above,
+//     this.type = "The Works";
+//   }
+//   slice(){ // Call the property of the parent class with slice method.
+//     console.log(`Our ${this.type} ${this.size} pizza has 8 slices`);
+//   }
+// }
+
+// class largeSpecialtyPizza extends Pizza { // This is a child class using extends
+//   constructor(pizzaSize){
+//     super(pizzaSize) // calling the constructor of the parent class above,
+//     this.type = "The Works";
+//   }
+//   slice(){ // Call the property of the parent class with slice method.
+//     console.log(`Our ${this.type} ${this.size} pizza has 12 slices`);
+//   }
+// }
+
+// const myMediumSpecialtyPizza = new mediumSpecialtyPizza("medium"); // Output Our The Works medium pizza has 8 slices
+// myMediumSpecialtyPizza.slice();
+// const myLargeSpecialtyPizza = new largeSpecialtyPizza("large"); // Output Our The Works medium pizza has 12 slices
+// myLargeSpecialtyPizza.slice();
+
+
+// This is the es6 practice for creating a class by creating a factory faction (version 3)
+/* function pizzaFactory(pizzaSize) {
+  const crust = "original";
+  const size = pizzaSize;
+  return {
+    bake: () => console.log(`Baking a ${size} ${crust} crust pizza.`)
   }
 }
 
-const myPizza = new Pizza("peperoni", "small", "thin");
-myPizza.pizzaCrust = "thick"; // This is setting the value passed by the getter and setter
-myPizza.bake()
-console.log(myPizza.pizzaCrust); // Returning the updated pizzaCrust value for "Thick"
+const myPizza = pizzaFactory("small");
+myPizza.bake(); */
 
-Create a multi setter and getter
+
+// This is the updated practice that support the public and private field.
+class Pizza { // parent class as blue print.
+  crust = "original"; // this is a public field.
+  #sauce = "traditional";  // this is a private field using a hash.
+  #size; 
+  constructor(pizzaSize){ // pizzaSize as the parameter.
+    this.#size = pizzaSize;  // #size was referred here inside the class.
+  }
+  getCrust(){ 
+    return this.crust;
+  }
+  setCrust(pizzaCrust){ 
+    this.crust = pizzaCrust;
+  }
+  hereYouGo(){
+    console.log(`Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza.`);
+  }
+}
+
+const myPizza = new Pizza("large") // Define myPizza again as an argument to the parameter.
+myPizza.hereYouGo(); //call the hereYouGo method.
+
+// Note, You can still access the public field
+console.log(myPizza.getCrust());
