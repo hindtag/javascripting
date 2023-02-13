@@ -411,6 +411,8 @@ Rock paper scissor
 
         For in loop is used in an object.
 
+| Classes
+
 Continue on "3:14:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
