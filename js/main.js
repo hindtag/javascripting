@@ -679,25 +679,71 @@ main.js:667 On drums, it's John Bonham
 */
 
 // destructuring object for this object
-const band = {
-  vocals: "Robert Plant",
-  guitar: "Jimmy page",
-  bass: "Jon Paul Jones",
-  drums: "John Bonham"
-};
+// const band = {
+//   vocals: "Robert Plant",
+//   guitar: "Jimmy page",
+//   bass: "Jon Paul Jones",
+//   drums: "John Bonham"
+// };
 
 // This is the correct destructuting
-const {vocals, guitar, bass, drums} = band; // creating a 4 new variable with inheritance.
+// const {vocals, guitar, bass, drums} = band; // creating a 4 new variable with inheritance.
 // console.log(vocals); // Output is Robert Plant
 // console.log(guitar); // Output is Jimmy page
 // console.log(bass); // Output is Jon Paul Jones
 
 // This is much cooler in destructuring with function.
-function sings({ vocals }) {return `${vocals} sings!`}; // Creating a function for the object.
-console.log(sings(band)); // Output is Robert Plant sings!
+// function sings({ vocals }) {return `${vocals} sings!`}; // Creating a function for the object.
+// console.log(sings(band)); // Output is Robert Plant sings!
 
 /*
 Explanation:
 line 695 (inside) tells for {vocals} after the object "I expect a value from vocals coming out of an object".
 line 695 second part {} tells fron this function return this.
 */
+
+// javascript classes
+// class Pizza {
+//   constructor(pizzaType, pizzaSize, pizzaCrust){
+//     this.type = pizzaType;
+//     this.size = pizzaSize;
+//     this.crust = pizzaCrust;
+//   }
+//   bake(){
+//     console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+//   }
+// }
+
+// const myPizza = new Pizza("peperoni", "small", "thin");
+// myPizza.bake()
+// console.log(myPizza.type); // Current output is peperoni
+
+// // Changing values of a property through .notation. (This is not the proper way)
+// myPizza.type = "supreme"; // Changing from peperoni to supreme.
+// console.log(myPizza.type); // Updated output is supreme
+
+
+// The proper way to change a value is using a getters and setters
+// Using the example above
+
+class Pizza {
+  constructor(pizzaType, pizzaSize, pizzaCrust){
+    this.type = pizzaType;
+    this.size = pizzaSize;
+    this.crust = pizzaCrust;
+  }
+  get pizzaCrust(){
+    return this.crust;
+  }
+  set pizzaCrust(pizzaCrust){
+    this.crust = pizzaCrust;
+  }
+  bake(){
+    console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+  }
+}
+
+const myPizza = new Pizza("peperoni", "small", "thin");
+myPizza.pizzaCrust = "sausage";
+myPizza.bake()
+console.log(myPizza.pizzaCrust); 
