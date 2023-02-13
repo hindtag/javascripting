@@ -732,10 +732,10 @@ class Pizza {
     this.size = pizzaSize;
     this.crust = pizzaCrust;
   }
-  get pizzaCrust(){
+  get pizzaCrust(){ // This is creating a method for crust
     return this.crust;
   }
-  set pizzaCrust(pizzaCrust){
+  set pizzaCrust(pizzaCrust){ // Setting the crust with parameter (pizzaCrust)
     this.crust = pizzaCrust;
   }
   bake(){
@@ -744,6 +744,8 @@ class Pizza {
 }
 
 const myPizza = new Pizza("peperoni", "small", "thin");
-myPizza.pizzaCrust = "sausage";
+myPizza.pizzaCrust = "thick"; // This is setting the value passed by the getter and setter
 myPizza.bake()
-console.log(myPizza.pizzaCrust); 
+console.log(myPizza.pizzaCrust); // Returning the updated pizzaCrust value for "Thick"
+
+Create a multi setter and getter
