@@ -1,0 +1,49 @@
+Learn the following JScript before react:
+https://www.freecodecamp.org/news/top-javascript-concepts-to-know-before-learning-react/
+Array methods
+
+Callback Functions
+
+Callback Hell
+
+Promises in JavaScript
+	https://www.freecodecamp.org/news/javascript-es6-promises-for-beginners-resolve-reject-and-chaining-explained/
+
+Asynchronous and Synchronous
+	https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/
+
+Map() in JavaScript
+	https://www.freecodecamp.org/news/javascript-map-how-to-use-the-js-map-function-array-method/
+
+For each, for in, for of
+
+Filter() and Find() in JavaScript
+	https://www.freecodecamp.org/news/javascript-array-filter-tutorial-how-to-iterate-through-elements-in-an-array/
+
+Destructuring Arrays and Objects in JavaScript
+	https://www.freecodecamp.org/news/array-and-object-destructuring-in-javascript/
+
+Rest and Spread Operators in JavaScript
+	https://www.freecodecamp.org/news/javascript-rest-vs-spread-operators/
+
+Unique Value - Set() in JavaScript
+	https://www.geeksforgeeks.org/sets-in-javascript/
+
+Dynamic Object keys in JavaScript
+	https://stackoverflow.com/questions/55413572/what-is-the-standard-naming-convention-of-properties-in-a-object-camelcase-or-s
+	https://hackmamba.io/blog/2020/11/dynamic-javascript-object-keys/
+
+reduce() in JavaScript
+	https://www.freecodecamp.org/news/reduce-f47a7da511a9/
+
+Optional chaining in JavaScript
+	https://www.freecodecamp.org/news/javascript-optional-chaining-explained/
+
+Fetch API & Errors in JavaScript
+	https://www.freecodecamp.org/news/how-to-make-api-calls-with-fetch/
+
+How to Handle Errors in the Fetch API
+	https://www.tjvantoll.com/2015/09/13/fetch-and-errors/
+
+Async/Await in JavaScript
+	https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/
