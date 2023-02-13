@@ -408,10 +408,20 @@ Rock paper scissor
                 Need note Log here.
         // Deconstructing
                 Need note log here.
-
         For in loop is used in an object.
 
-| Classes
+| Classes = Need note Log here
+        // parent class | super class
+        // child class
+        // constructor
+        // private and public
+        // getters and setters
+
+| JSON
+    Used to send and recieved data not just javascript.
+    A text format that is completely language independent.
+        // Stringify = method used to format from object to JSON.
+        // Parse = method used to format from JSON to an object.
 
 Continue on "3:14:00"
 

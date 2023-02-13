@@ -812,26 +812,50 @@ myPizza.bake(); */
 
 
 // This is the updated practice that support the public and private field.
-class Pizza { // parent class as blue print.
-  crust = "original"; // this is a public field.
-  #sauce = "traditional";  // this is a private field using a hash.
-  #size; 
-  constructor(pizzaSize){ // pizzaSize as the parameter.
-    this.#size = pizzaSize;  // #size was referred here inside the class.
-  }
-  getCrust(){ 
-    return this.crust;
-  }
-  setCrust(pizzaCrust){ 
-    this.crust = pizzaCrust;
-  }
-  hereYouGo(){
-    console.log(`Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza.`);
-  }
-}
+// class Pizza { // parent class as blue print.
+//   crust = "original"; // this is a public field.
+//   #sauce = "traditional";  // this is a private field using a hash.
+//   #size; 
+//   constructor(pizzaSize){ // pizzaSize as the parameter.
+//     this.#size = pizzaSize;  // #size was referred here inside the class.
+//   }
+//   getCrust(){ 
+//     return this.crust;
+//   }
+//   setCrust(pizzaCrust){ 
+//     this.crust = pizzaCrust;
+//   }
+//   hereYouGo(){
+//     console.log(`Here's your ${this.crust} ${this.#sauce} sauce ${this.#size} pizza.`);
+//   }
+// }
 
-const myPizza = new Pizza("large") // Define myPizza again as an argument to the parameter.
-myPizza.hereYouGo(); //call the hereYouGo method.
+// const myPizza = new Pizza("large") // Define myPizza again as an argument to the parameter.
+// myPizza.hereYouGo(); //call the hereYouGo method.
 
-// Note, You can still access the public field
-console.log(myPizza.getCrust());
+// // Note, You can still access the public field
+// console.log(myPizza.getCrust());
+
+// || JSON
+const myObj = {
+  name: "Dave",
+  hobbies: ["eat", "sleep", "code"],
+  hello: function (){
+    console.log("Hello!");
+  }
+};
+
+console.log(myObj); // whole object
+console.log(myObj.name); // Output is Dave
+myObj.hello(); // Calling just the hello method with function string value of "Hello!"
+console.log(typeof myObj); // Output is object
+
+// FORMATTING AN OBJECT [SENDING]
+const sendJSON = JSON.stringify(myObj) //Stringify is a method to send the object as a JSON FORMAT and passing myObj as parameter.
+console.log(sendJSON); // Output is now JSON format {"name":"Dave","hobbies":["eat","sleep","code"]}
+console.log(typeof sendJSON); // This is now string
+
+// FORMATTING AN OBJECT [RECIEVING]
+const recieveJSON = JSON.parse(sendJSON); // Parse is a method to deconstruct a JSON format
+console.log(recieveJSON); // Output is Object format {name: 'Dave', hobbies: Array(3)}
+console.log(typeof recieveJSON); // This is object again
