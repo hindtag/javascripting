@@ -1,1 +1,0 @@
-// This is for refactoring codes for main.js // more like a scratch
