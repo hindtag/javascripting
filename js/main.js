@@ -992,5 +992,10 @@ console.log(typeof recieveJSON); // This is object again
   
 // // }
 
-const view = document.querySelector("view2");
+
+view1.style.display = "none";
+view2.style.display = "flex";
+
+
+const view = document.querySelector("#view2");
 console.log(view);
