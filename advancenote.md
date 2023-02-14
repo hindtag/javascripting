@@ -438,7 +438,9 @@ Rock paper scissor
 
 | DOM - Document Object Model
 
-Continue on "4:07:00"
+
+
+Continue on "4:13:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 
