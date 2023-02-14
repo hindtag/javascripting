@@ -908,12 +908,86 @@ console.log(typeof recieveJSON); // This is object again
 
 // | DOM
 
-const view1 = document.getElementById("view1");
-console.log(view1);
-const view2 = document.querySelector("#view2");
-console.log(view2);
-view1.style.display = "flex";
-view2.style.display = "none";
+// By ID
+// const view1 = document.getElementById("view1");
+// console.log(view1);
+// const view2 = document.querySelector("#view2");
+// console.log(view2);
+// view1.style.display = "flex";
+// view2.style.display = "none";
 
-const views = document.getElementsByClassName("view");
-console.log(views);
+// // By Classname
+// const views = document.getElementsByClassName("view");
+// console.log(views);
+// const sameViews = document.querySelectorAll('.view');
+// console.log(sameViews);
+
+// // All divs
+// const divs = view1.querySelectorAll("div");
+// console.log(divs);
+// const sameDivs = view1.getElementsByTagName("div");
+// console.log(sameDivs);
+
+// // Specific selectors | even divs (2,4,6,8,10,12)
+// const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
+// console.log(evenDivs);
+
+// // Manipulating / Altering the UI styles
+// for (let i = 0; i < evenDivs.length; i++){
+//   evenDivs[i].style.backgroundColor = "darkblue"
+//   // evenDivs[i].style.width = "200px";
+//   // evenDivs[i].style.height = "200px";
+// }
+
+// // Altering the text
+const navText = document.querySelector("nav h1");
+console.log(navText);
+navText.textContent = "Hello world!"
+const navbar = document.querySelector("nav");
+navbar.innerHTML = `<h1>Hello</h1> <p>This should align right</p>`;
+console.log(navbar);
+navbar.style.justifyContent = "space-between";
+
+// // Navigating the DOM tree
+// console.log(evenDivs[0]); // 2
+// console.log(evenDivs[0].parentElement); // Whole page
+// console.log(evenDivs[0].parentElement.children); // All div "1-12"
+// console.log(evenDivs[0].parentElement.childNodes); // In this example the output is all text + all div
+// console.log(evenDivs[0].parentElement.hasChildNodes()); // true
+// console.log(evenDivs[0].parentElement.lastChild); // text
+// console.log(evenDivs[0].parentElement.lastElementChild); // 12
+// console.log(evenDivs[0].nextSibling); // #text 3
+// console.log(evenDivs[0].nextElementSibling); // div "3"
+// console.log(evenDivs[0].previousSibling); // #text 1
+// console.log(evenDivs[0].previousElementSibling); // div "1"
+// console.log(evenDivs[0].nextElementSibling.nextElementSibling); // Chaining that has output of div 1 and 4
+
+// Adding and removing
+view1.style.display = "none";
+view2.style.display = "flex";
+view2.style.flexDirection = "row";
+view2.style.flexWrap = "wrap";
+view2.style.margin = "10px";
+
+while (view2.lastChild) { // removing
+  view2.lastChild.remove();
+}
+
+const createDivs = (parent, iter) => { // Altering
+  const newDiv = document.createElement("div");
+  newDiv.textContent = iter;
+  newDiv.style.backgroundColor = "#000";
+  newDiv.style.width = "100px";
+  newDiv.style.height = "100px";
+  newDiv.style.margin = "10px";
+  newDiv.style.display = "flex";
+  newDiv.style.justifyContent = "center";
+  newDiv.style.alignItems = "center";
+  parent.append(newDiv);
+}
+
+// createDivs(view2,10);
+for (let i = 0; i <= 12; i++) { // Creating new divs using loop
+  createDivs(view2, i);
+  
+}

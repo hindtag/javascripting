@@ -437,10 +437,31 @@ Rock paper scissor
         .table used to console a table error that are more detailed.
 
 | DOM - Document Object Model
+        You can navigate the DOM tree with this
+        document.
+                getElementById
+                querySelector
+                getElementsByClassName
+                querySelectorAll
+                getElementsByTagName
+                parentElement
+                nextSibling
+                nextElementSibling
+                previousSibling
+                previousElementSibling
 
 
 
-Continue on "4:13:00"
+Chaining
+parentElement.children
+parentElement.childNodes
+parentElement.hasChildNodes
+parentElement.lastChild
+parentElement.lastElementChild
+nextElementSibling.nextElementSibling
+
+
+Continue on "4:40:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 
