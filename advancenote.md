@@ -432,10 +432,13 @@ Rock paper scissor
             // try
             // catch
             // throw
+            // finally
         .warn used to console a warning error
         .table used to console a table error that are more detailed.
 
-Continue on "4:00:00"
+| DOM - Document Object Model
+
+Continue on "4:07:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
 
