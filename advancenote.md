@@ -450,24 +450,17 @@ Rock paper scissor
                 previousSibling
                 previousElementSibling
 
+                //Chaining
+                parentElement.children
+                parentElement.childNodes
+                parentElement.hasChildNodes
+                parentElement.lastChild
+                parentElement.lastElementChild
+                nextElementSibling.nextElementSibling
 
+// Event listener 
+    used to interact with the browser
 
-Chaining
-parentElement.children
-parentElement.childNodes
-parentElement.hasChildNodes
-parentElement.lastChild
-parentElement.lastElementChild
-nextElementSibling.nextElementSibling
+Continue on "4:42:00"
 
-
-Continue on "4:40:00"
-
-Note: Only log here the explanation, summary and atleast 1 example to trim down the note.
-
-Resources:
-    String methods
-        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-
-    Math methods
-        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+Note: Only log here the explanation, summary and atleast 1 example to trim down the note. (see main.js)
