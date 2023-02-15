@@ -461,6 +461,6 @@ Rock paper scissor
 // Event listener 
     used to interact with the browser
 
-Continue on "4:42:00"
+Continue on "4:50:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note. (see main.js)
