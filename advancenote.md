@@ -458,9 +458,16 @@ Rock paper scissor
                 parentElement.lastElementChild
                 nextElementSibling.nextElementSibling
 
-// Event listener 
+// Event listener - Need to study
     used to interact with the browser
+        Capturing, bubbling and delegation.
 
-Continue on "4:50:00"
+            // Need to study clicked event listener
+            // ready state change event
+            // Bubbling
+            // Propagation
+            // Addeventlistener (event, function and usecapture) - Need to study
+
+Continue on "5:00:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note. (see main.js)
