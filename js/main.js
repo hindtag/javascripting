@@ -993,8 +993,12 @@ console.log(typeof recieveJSON); // This is object again
 // // }
 
 
-view1.style.display = "none";
-view2.style.display = "flex";
+// view1.style.display = "none";
+// view2.style.display = "flex";
 
-const view = document.querySelector("#view2");
-console.log(view);
+// const view = document.querySelector("#view2");
+// console.log(view);
+
+const grandparent = document.querySelector(".grandparent")
+const parent = document.querySelector(".parent")
+const child = document.querySelector(".child")
