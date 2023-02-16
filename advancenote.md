@@ -460,7 +460,8 @@ Rock paper scissor
 
 // Event listener - Need to study
     used to interact with the browser
-        Capturing, bubbling and delegation.
+        Select, bubbling, capturing and delegation.
+        
 
             // Need to study clicked event listener
             // ready state change event

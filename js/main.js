@@ -999,6 +999,17 @@ console.log(typeof recieveJSON); // This is object again
 // const view = document.querySelector("#view2");
 // console.log(view);
 
+// This is a event listener crash course
 const grandparent = document.querySelector(".grandparent")
 const parent = document.querySelector(".parent")
 const child = document.querySelector(".child")
+
+grandparent.addEventListener('click', e => { // e means event object for target element
+  console.log("Granpa 1");
+})
+parent.addEventListener('click', e => {
+  console.log("Dad 1"); 
+})
+child.addEventListener('click', e => { 
+  console.log("Son 1");
+})

@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* || Event listener crash course
 html {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -103,9 +104,12 @@ section {
     padding-top: 48px;
 }
 
+*/
 /* Depending on the view example (1, 2, or 3), 
 you will want to set display:none for the other two 
 and display:flex for the example you want to see. */
+
+/*
 .view1 {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -226,3 +230,5 @@ and display:flex for the example you want to see. */
     padding: 0.75rem;
     border-radius: 10px;
 } 
+
+*/
