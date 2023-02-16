@@ -1140,7 +1140,7 @@ posts.forEach(post => {
 console.clear();
 
 const filteredPosts = posts.filter(post => {
-  return post.userId === 5;
+  return post.userId === 3;
 });
 
 console.log(filteredPosts);
@@ -1148,3 +1148,5 @@ console.log(filteredPosts);
 const mappedPosts = filteredPosts.map(post => {
   return post.id * 10;
 })
+
+console.log(mappedPosts);
