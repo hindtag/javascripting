@@ -1111,13 +1111,40 @@ console.log(shred());
 console.log(fingerPicking());
 */
 
+/*
 // Import All
 import * as Guitars from "./guitars.js"
 console.log(Guitars.playGuitar());
 console.log(Guitars.shredding());
 console.log(Guitars.plucking());
 
+*/
+/*
 // From user.js
 import User from "./user.js";
 const me = new User("email@email.com", "Tag");
 console.log(me.greeting());
+*/
+
+//////////////////////////////////////////////////////
+//              Higher order functions
+//////////////////////////////////////////////////////
+
+// For each()
+
+import { posts } from "./posts.js";
+
+posts.forEach(post => {
+  console.log(post);
+});
+console.clear();
+
+const filteredPosts = posts.filter(post => {
+  return post.userId === 5;
+});
+
+console.log(filteredPosts);
+
+const mappedPosts = filteredPosts.map(post => {
+  return post.id * 10;
+})
