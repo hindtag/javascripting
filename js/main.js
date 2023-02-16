@@ -1004,12 +1004,89 @@ const grandparent = document.querySelector(".grandparent")
 const parent = document.querySelector(".parent")
 const child = document.querySelector(".child")
 
-grandparent.addEventListener('click', e => { // e means event object for target element
-  console.log("Granpa 1");
-})
-parent.addEventListener('click', e => {
-  console.log("Dad 1"); 
-})
-child.addEventListener('click', e => { 
-  console.log("Son 1");
-})
+// grandparent.addEventListener('click', (e) => { // e means event object for target element
+//   console.log("Granpa 1");
+// })
+// parent.addEventListener('click', (e) => {
+//   console.log("Dad 1"); 
+// },
+//   {capture: true}
+// )
+// child.addEventListener('click', (e) => { 
+//   console.log("Son 1");
+// })
+
+// // Using stop propagation
+// child.addEventListener('click', (e) => { 
+//   console.log("Son 1") e.stopPropagation // Stopping the bubbling/capturing
+// })
+
+// // Running once event
+// child.addEventListener('click',
+//   e => { 
+//   console.log("Son 1")
+// }, { once: true })
+
+// Using target
+// const grandparent = document.querySelector(".grandparent")
+// const parent = document.querySelector(".parent")
+// const child = document.querySelector(".child")
+
+
+// ///////////////////////////////////////////////////////////////
+// addGlobalEventListener("click", 'div' (e) => {
+//     console.log('Hi');
+//   }
+// })
+// ///////////////////////////////////////////////////////////////
+// // Much better to use a function to be reusable above
+// function addGlobalEventListener(type, selector, callback){
+//   document.addEventListener(type, e => {
+//     if (e.target.matches("selector")) callback(e)
+//   })
+// }
+// // reference: https://youtu.be/XF1_MlZ5l6M
+// ///////////////////////////////////////////////////////////////
+
+// const newDiv = document.createElement("div") // Creating a new Div class
+// newDiv.style.width = "200px" // New div class properties
+// newDiv.style.height = "200px" 
+// newDiv.style.backgroundColor = "purple"
+// document.body.append(newDiv) // Adding a new div after the existing div in the HTML
+
+
+// | Web Storage API
+// alert("ok!")
+// alert(location);
+
+// Local Storage
+const myArray = ["eat", "sleep", "code"];
+const myObj = {
+  name: "Tag",
+  hobbies: ["eat", "sleep", "code"],
+  logName: function(){
+    console.log(this.name);
+  }
+};
+
+////////////////////////////////////////////
+//    Session Storage
+// Only keeps the data during the sessions.
+// While on or logged into the website.
+///////////////////////////////////////////
+sessionStorage.setItem("mySessionStore", JSON.stringify(myArray));
+const mySessionData = JSON.parse(sessionStorage.getItem("mySessionStore"));
+console.log(mySessionData);
+
+
+////////////////////////////////////////////
+//    Local Storage
+// Will store persistent data and it will
+// continue to store that data in the browser
+// window.localStorage
+
+localStorage.setItem("myLocalStore", JSON.stringify(myArray));
+localStorage.clear(); // clearing the local storage
+const myLocalData = JSON.parse(localStorage.getItem("myLocalStore"));
+console.log(myLocalData);
+

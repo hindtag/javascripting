@@ -460,15 +460,15 @@ Rock paper scissor
 
 // Event listener - Need to study
     used to interact with the browser
-        Select, bubbling, capturing and delegation.
-        
+        Selecting, capturing, bubbling, propagation and delegation, target.
 
-            // Need to study clicked event listener
-            // ready state change event
-            // Bubbling
-            // Propagation
-            // Addeventlistener (event, function and usecapture) - Need to study
+// Web storage API - Need to study this further
+        // set method
+        // retrieve by using get
+        // remove item
+        // clear
+        // specify the  index position in local storage to get the key return
 
-Continue on "5:00:00"
+Continue on "5:17:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note. (see main.js)
