@@ -469,8 +469,11 @@ Rock paper scissor
         // clear
         // specify the  index position in local storage to get the key return
 
-// Modules
+// Modules - Need to study this further
 
-Continue on "5:39:00"
+// Higher Order Functions - Need to study this further
+
+Continue on "6:03:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note. (see main.js)
+
