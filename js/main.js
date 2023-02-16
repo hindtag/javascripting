@@ -1060,6 +1060,7 @@ const child = document.querySelector(".child")
 // alert(location);
 
 // Local Storage
+/*
 const myArray = ["eat", "sleep", "code"];
 const myObj = {
   name: "Tag",
@@ -1068,25 +1069,55 @@ const myObj = {
     console.log(this.name);
   }
 };
-
+*/
 ////////////////////////////////////////////
 //    Session Storage
 // Only keeps the data during the sessions.
 // While on or logged into the website.
 ///////////////////////////////////////////
+
+/*
 sessionStorage.setItem("mySessionStore", JSON.stringify(myArray));
 const mySessionData = JSON.parse(sessionStorage.getItem("mySessionStore"));
 console.log(mySessionData);
 
-
+*/
 ////////////////////////////////////////////
 //    Local Storage
 // Will store persistent data and it will
 // continue to store that data in the browser
 // window.localStorage
+/*
 
 localStorage.setItem("myLocalStore", JSON.stringify(myArray));
 localStorage.clear(); // clearing the local storage
 const myLocalData = JSON.parse(localStorage.getItem("myLocalStore"));
 console.log(myLocalData);
 
+*/
+
+//////////////////////////////////////////////////////
+//                 Module
+//////////////////////////////////////////////////////
+// We can import from guitars.js using the following.
+//////////////////////////////////////////////////////
+/*
+// Individually
+import playGuitar from "./guitars.js";
+import { shredding as shred, plucking as fingerPicking } from "./guitars.js";
+
+console.log(playGuitar());
+console.log(shred());
+console.log(fingerPicking());
+*/
+
+// Import All
+import * as Guitars from "./guitars.js"
+console.log(Guitars.playGuitar());
+console.log(Guitars.shredding());
+console.log(Guitars.plucking());
+
+// From user.js
+import User from "./user.js";
+const me = new User("email@email.com", "Tag");
+console.log(me.greeting());
