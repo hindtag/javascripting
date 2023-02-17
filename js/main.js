@@ -1255,17 +1255,75 @@ myPromise.then(value => {
 // anotherFunc();
 // console.log(myUsers.userList);
 
-// Example 2
-const getAllUserEmails = async () => {
-  
-	const response = await fetch('https://jsonplaceholder.typicode.com/users');
-	const jsonUserData = await response.json();
+// // Example 2
+// const getAllUserEmails = async () => {
+
+// 	const response = await fetch('https://jsonplaceholder.typicode.com/users');
+// 	const jsonUserData = await response.json();
 	
-  const userEmailArray = jsonUserData.map(user => {
-    return user.email;
-  });
+//   const userEmailArray = jsonUserData.map(user => {
+//     return user.email;
+//   });
 
-  console.log(userEmailArray);
-};
+//   postToWebPage(userEmailArray);
+// };
 
-getAllUserEmails();
+// const postToWebPage = (data) => {
+//   console.log(data);
+// }
+
+// getAllUserEmails();
+
+////////////////////
+// Get fetch
+////////////////////
+// const getDadJoke = async () => {
+//   const response = await fetch("https://icanhazdadjoke.com/", {
+//     method: "GET",
+//     headers: {
+//       Accept: "application/json"
+//     }
+//   });
+//   const jsonJokeData = await response.json();
+//   console.log(jsonJokeData.joke);
+// }
+
+// getDadJoke();
+
+////////////////////
+// Post fetch
+////////////////////
+
+// const jokeObject = {
+//   id: 'lGlbhqjGJBd',
+//   joke: 'How does the moon cut his hair? Eclipse it.'
+// }
+
+// const postData = async (jokeObj) => {
+
+//   const response = await fetch("https://httpbin.org/post", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json"
+//     },
+//     body: JSON.stringify(jokeObj)
+//   });
+//   const jsonResponse = await response.json();
+//   console.log(jsonResponse);
+// }
+
+// postData(jokeObject);
+
+////////////////////
+// Fetch as object
+////////////////////
+
+const requestJoke = async (firstName, lastName) => {
+
+  const response = await fetch(`http:api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`);
+  const jsonResponse = await response.json();
+
+  console.log(jsonResponse.value);
+}
+
+requestJoke("Clin", "eastwood");
