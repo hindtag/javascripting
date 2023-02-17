@@ -1129,24 +1129,33 @@ console.log(me.greeting());
 //////////////////////////////////////////////////////
 //              Higher order functions
 //////////////////////////////////////////////////////
-
 // For each()
+// import { posts } from "./posts.js";
 
-import { posts } from "./posts.js";
+// posts.forEach(post => {
+//   console.log(post);
+// });
+// console.clear();
 
-posts.forEach(post => {
-  console.log(post);
-});
-console.clear();
+// const filteredPosts = posts.filter(post => {
+//   return post.userId === 1; // Filter all id #5
+// });
 
-const filteredPosts = posts.filter(post => {
-  return post.userId === 3;
-});
+// console.log(filteredPosts);
 
-console.log(filteredPosts);
+// const mappedPosts = filteredPosts.map(post => {
+//   return post.id * 10; // Post 10 times for the id #5
+// })
 
-const mappedPosts = filteredPosts.map(post => {
-  return post.id * 10;
-})
+// console.log(mappedPosts);
 
-console.log(mappedPosts);
+// const reducedPostsValue = mappedPosts.reduce((sum, post) => {
+//   return sum + post;
+// });
+// console.log(reducedPostsValue);
+//////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////
+//              Fetch API
+// Such as Callbacks, Promises, Thenables and Async/Await
+/////////////////////////////////////////////////////////////
