@@ -21,7 +21,7 @@
 
 // End of String */
 
-// /* 
+// /*
 // // Numbers
 // const myNumber = 42;
 // const myFloat1 = 42.00;
@@ -63,7 +63,7 @@
 // // NAN
 
 // console.log(Number.isNaN("dave")); // False
-// console.log(isNaN("dave")); // True 
+// console.log(isNaN("dave")); // True
 
 // More example:
 
@@ -422,7 +422,6 @@
 
 // // console.log(toProperCase("BiRoN")); // By using chartAt and slice the Output is Biron.
 
-
 // // global scope
 // // var x = 1; // function scoped
 // // let y = 2; // block scoped
@@ -450,7 +449,6 @@
 // // }
 
 // // console.log(myFunc());
-
 
 // // Arrays
 // const myArray = [];
@@ -502,7 +500,7 @@
 // const newArray = myArrayA.concat(myArrayB); // value is ['A', 'B', 'C', 'D', 'E', 'F'] by adding two array
 // const newArrayToo = [...myArrayA, ...myArrayB]; // value is ['A', 'B', 'C', 'D', 'E', 'F'] by creating a new array that has 6 elements
 
-// console.log(newArray); // Output is ['A', 'B', 'C', 'D', 'E', 'F'] 
+// console.log(newArray); // Output is ['A', 'B', 'C', 'D', 'E', 'F']
 // console.log(newArrayToo); // Output is ['A', 'B', 'C', 'D', 'E', 'F']
 
 /*
@@ -722,7 +720,6 @@ line 695 second part {} tells fron this function return this.
 // myPizza.type = "supreme"; // Changing from peperoni to supreme.
 // console.log(myPizza.type); // Updated output is supreme
 
-
 // The proper way to change a value is using a getters and setters
 // Creating a class Using the example above (version 1)
 // class Pizza {
@@ -734,7 +731,7 @@ line 695 second part {} tells fron this function return this.
 //   }
 //   getCrust(){ // This is creating a method for crust
 //     return this.crust;
-  
+
 //   }
 //   setCrust(pizzaCrust){ // Setting the crust with parameter (pizzaCrust)
 //     this.crust = pizzaCrust;
@@ -763,11 +760,11 @@ line 695 second part {} tells fron this function return this.
 //     this._size = pizzaSize; // Intended as private and should not be modified outside the class.
 //     this._crust = "original"; // Intended as private and should not be modified outside the class.
 //   }
-//   getCrust(){ 
+//   getCrust(){
 //     return this._crust;
-  
+
 //   }
-//   setCrust(pizzaCrust){ 
+//   setCrust(pizzaCrust){
 //     this._crust = pizzaCrust;
 //   }
 // }
@@ -797,7 +794,6 @@ line 695 second part {} tells fron this function return this.
 // const myLargeSpecialtyPizza = new largeSpecialtyPizza("large"); // Output Our The Works medium pizza has 12 slices
 // myLargeSpecialtyPizza.slice();
 
-
 // This is the es6 practice for creating a class by creating a factory faction (version 3)
 /* function pizzaFactory(pizzaSize) {
   const crust = "original";
@@ -810,19 +806,18 @@ line 695 second part {} tells fron this function return this.
 const myPizza = pizzaFactory("small");
 myPizza.bake(); */
 
-
 // This is the updated practice that support the public and private field.
 // class Pizza { // parent class as blue print.
 //   crust = "original"; // this is a public field.
 //   #sauce = "traditional";  // this is a private field using a hash.
-//   #size; 
+//   #size;
 //   constructor(pizzaSize){ // pizzaSize as the parameter.
 //     this.#size = pizzaSize;  // #size was referred here inside the class.
 //   }
-//   getCrust(){ 
+//   getCrust(){
 //     return this.crust;
 //   }
-//   setCrust(pizzaCrust){ 
+//   setCrust(pizzaCrust){
 //     this.crust = pizzaCrust;
 //   }
 //   hereYouGo(){
@@ -863,7 +858,7 @@ console.log(typeof recieveJSON); // This is object again
 */
 
 // | Errors and Error handling
-"use strict"; // use to enforce some of javascript rules.
+'use strict'; // use to enforce some of javascript rules.
 
 // const makeError = () => {
 //   try {
@@ -904,7 +899,6 @@ console.log(typeof recieveJSON); // This is object again
 //   this.name = "customError";
 //   this.stack = `${this.name}: ${this.message}`;
 // } end of custom error*/
-
 
 // | DOM
 
@@ -989,9 +983,8 @@ console.log(typeof recieveJSON); // This is object again
 // createDivs(view2, "My 2nd view");
 // // for (let i = 0; i <= 12; i++) { // Creating new divs using loop
 // //   createDivs(view2, i);
-  
-// // }
 
+// // }
 
 // view1.style.display = "none";
 // view2.style.display = "flex";
@@ -1000,30 +993,30 @@ console.log(typeof recieveJSON); // This is object again
 // console.log(view);
 
 // This is a event listener crash course
-const grandparent = document.querySelector(".grandparent")
-const parent = document.querySelector(".parent")
-const child = document.querySelector(".child")
+const grandparent = document.querySelector('.grandparent');
+const parent = document.querySelector('.parent');
+const child = document.querySelector('.child');
 
 // grandparent.addEventListener('click', (e) => { // e means event object for target element
 //   console.log("Granpa 1");
 // })
 // parent.addEventListener('click', (e) => {
-//   console.log("Dad 1"); 
+//   console.log("Dad 1");
 // },
 //   {capture: true}
 // )
-// child.addEventListener('click', (e) => { 
+// child.addEventListener('click', (e) => {
 //   console.log("Son 1");
 // })
 
 // // Using stop propagation
-// child.addEventListener('click', (e) => { 
+// child.addEventListener('click', (e) => {
 //   console.log("Son 1") e.stopPropagation // Stopping the bubbling/capturing
 // })
 
 // // Running once event
 // child.addEventListener('click',
-//   e => { 
+//   e => {
 //   console.log("Son 1")
 // }, { once: true })
 
@@ -1031,7 +1024,6 @@ const child = document.querySelector(".child")
 // const grandparent = document.querySelector(".grandparent")
 // const parent = document.querySelector(".parent")
 // const child = document.querySelector(".child")
-
 
 // ///////////////////////////////////////////////////////////////
 // addGlobalEventListener("click", 'div' (e) => {
@@ -1050,10 +1042,9 @@ const child = document.querySelector(".child")
 
 // const newDiv = document.createElement("div") // Creating a new Div class
 // newDiv.style.width = "200px" // New div class properties
-// newDiv.style.height = "200px" 
+// newDiv.style.height = "200px"
 // newDiv.style.backgroundColor = "purple"
 // document.body.append(newDiv) // Adding a new div after the existing div in the HTML
-
 
 // | Web Storage API
 // alert("ok!")
@@ -1158,4 +1149,123 @@ console.log(me.greeting());
 /////////////////////////////////////////////////////////////
 //              Fetch API
 // Such as Callbacks, Promises, Thenables and Async/Await
+// Thenables means using .then
 /////////////////////////////////////////////////////////////
+//////////////
+// Callbacks = Are just functions really that are passed to other functions as parameters
+///////////////
+// Promises
+// Promises deliver Async code.
+// 3 states: Pending, Fulfilled, rejected
+/////////////
+//
+/*
+////////////////////
+// Rejected
+////////////////////
+const myPromise = new Promise((resolve, reject) => {
+  const error = true;
+  if (!error) { // If error is false
+    resolve("Yes! resolved the promise");
+  } else {
+    reject("No! rejected the promise");
+  }
+});
+
+console.log(myPromise);
+
+myPromise
+.then(value => {
+  return value + 1;
+})
+.then(newvalue =>{
+  console.log(newvalue);
+})
+.catch(err => {
+  console.error(err);
+})
+*/
+
+////////////////////
+// Pending
+////////////////////
+/*
+const myPromise = new Promise((resolve, reject) => {
+  const error = false;
+  if (!error) { // If error is false
+    resolve("Yes! resolved the promise");
+  } else {
+    reject("No! rejected the promise");
+  }
+});
+
+const myNextPromise = new Promise((resolve, reject) => {
+  setTimeout(function () {
+    resolve("MyNextPromise is resolved");
+  }, 3000);
+})
+
+myNextPromise.then(value => {
+  console.log(value);
+});
+myPromise.then(value => {
+  console.log(value);
+});
+*/
+
+////////////////////
+// Pending using fetch API
+////////////////////
+
+// const users = fetch("https://jsonplaceholder.typicode.com/users");
+
+// Pending
+
+// const users = fetch("https://jsonplaceholder.typicode.com/users")
+// .then(Response => {
+//   return Response.json();
+// })
+// .then(data => {
+//   data.forEach(user => {
+//     console.log(user);
+//   });
+// })
+
+// console.log(users);
+
+////////////////////
+// Async/Await
+////////////////////
+// Example 1
+// const myUsers = {
+//   userList: []
+// };
+
+// const myCoolFunction = async () => {
+//   const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//   const jsonUserData = await response.json();
+//   return jsonUserData;
+// }
+
+// const anotherFunc = async () => {
+//   const data = await myCoolFunction();
+//   myUsers.userList = data;
+// }
+
+// anotherFunc();
+// console.log(myUsers.userList);
+
+// Example 2
+const getAllUserEmails = async () => {
+  
+	const response = await fetch('https://jsonplaceholder.typicode.com/users');
+	const jsonUserData = await response.json();
+	
+  const userEmailArray = jsonUserData.map(user => {
+    return user.email;
+  });
+
+  console.log(userEmailArray);
+};
+
+getAllUserEmails();
