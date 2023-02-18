@@ -1318,17 +1318,57 @@ myPromise.then(value => {
 // Fetch as object
 ////////////////////
 
-const requestJoke = async (firstName, lastName) => {
+// const requestJoke = async (firstName, lastName) => {
 
-  const response = await fetch(`https://api.chucknorris.io/jokes/random?firstName=${firstName}&lastName=${lastName}&limitTo=[nerdy]`);
+//   const response = await fetch(`https://api.chucknorris.io/jokes/random?firstName=${firstName}&lastName=${lastName}&limitTo=[nerdy]`);
 
-  const jsonResponse = await response.json();
+//   const jsonResponse = await response.json();
 
-  console.log(jsonResponse.value);
-}
+//   console.log(jsonResponse.value);
+// }
 
-requestJoke("Clint", "Eastwood");
+// requestJoke("Clint", "Eastwood");
 
 ////////////////////
 // Abstract into functions
 ////////////////////
+
+// From a form
+
+// const getDataFromForm = () => {
+//   const requestObj = {
+//     firstName: "Chuck",
+//     lastName: "Norris",
+//     categories: ["nerdy"]
+//   };
+//   return requestObj;
+// };
+
+// const buildRequestUrl = (requestData) => {
+//   return `https://api.chucknorris.io/jokes/random?firstName=${requestData.firstName}&lastName=${requestData.lastName}&limitTo=${requestData.categories}`;
+// }
+
+// const requestJoke = async (url) => {
+//   const response = await fetch(url);
+//   const jsonResponse = await response.json(); 
+//   const joke = jsonResponse.value.joke;
+//   postJokeToPage(joke);
+// }
+
+// const postJokeToPage = (joke) => {
+//   console.log(joke);
+// }
+
+// // Procedural "workflow" function
+// const processJokeRequest = async () => {
+//   const requestData = getDataFromForm();
+//   const requestUrl = buildRequestUrl(requestData);
+//   await requestJoke(requestUrl);
+//   console.log("Finished!");
+// }
+
+// processJokeRequest();
+
+/////////////////////////////////////////////////////////////
+//                 Regular Expression
+/////////////////////////////////////////////////////////////

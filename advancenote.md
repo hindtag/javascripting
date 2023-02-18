@@ -473,7 +473,11 @@ Rock paper scissor
 
 // Higher Order Functions - Need to study this further
 
-Continue on "7:08:00"
+// Promises / Fetch / Async & Await - Need to study this further
+
+// Regular Expressions - Need to study this further
+
+Continue on "7:20:00"
 
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note. (see main.js)
 
