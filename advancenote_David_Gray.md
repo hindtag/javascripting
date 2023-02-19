@@ -1,11 +1,10 @@
 Data Types:
-    To check the type of data use typeof
-        Example:
-            typeof "tag"
-            the output is 'string'
+To check the type of data use typeof
+Example:
+typeof "tag"
+the output is 'string'
 
 | String:
-
 
     Use camelCase
         Example:
@@ -20,7 +19,7 @@ Data Types:
 
             console.log(myVariable.length); // Output is 11
             console.log("Every good boy does fine".length); // Output is 24
-    
+
     Use .charAt() to returns the character at the position of set by the argument.
             Example:
             const myVariable = "Mathematics";
@@ -32,7 +31,7 @@ Data Types:
             const myVariable = "Mathematics";
 
             console.log(myVariable.indexOf("mat")); // Output is 5
-    
+
     Use of .lastIndexOf() to look for the position of the last occurence.
             Example:
             const myVariable = "Mathematics";
@@ -50,7 +49,7 @@ Data Types:
             const myVariable = "Mathematics";
 
             console.log(myVariable.toLocaleUpperCase()); // Output is MATHEMATICS
-    
+
     Use of .toLowerCase to transform the string into uppercase
         Example:
         const myVariable = "Mathematics";
@@ -70,14 +69,14 @@ Data Types:
         console.log("John, joe, doe".split(",")); // Output is ['John', ' joe', ' doe']
 
 | Numbers
-    Warning:
-        NAN = Not a number
-        On console when you see a 
-            blue = number
-            white = string
-    Note:
-        An integer is a whole number.
-            Example: 42.
+Warning:
+NAN = Not a number
+On console when you see a
+blue = number
+white = string
+Note:
+An integer is a whole number.
+Example: 42.
 
         A number with a decimal point is a float which references the floating point.
             Example: 42.
@@ -91,7 +90,7 @@ Data Types:
             console.log(myNumber === myFloat1); // Output is true
 
     || Number methods
-    
+
     Use Number.isInteger() to determine wheter the passed value us an integer.
         Example:
         const myNumber = 42;
@@ -128,23 +127,23 @@ Data Types:
 
         // Chaining = Using several methods chained together
             console.log(Number.parseFloat("4.237abc").toFixed(2).toString()); // 4.24
-        
+
 
     NaN determines wheter the passed value is NaN AND its type is Number.
         Example:
         console.log(Number.isNaN("dave")); // False
 
         ||| Global isNan determines wheter a value is NaN or not.
-            
+
             console.log(isNaN("dave")); // True
 
     || Math Methods
-    
+
     console.log(Math.PI); // Output is 3.141592653589793
 
     ||| Trunc
     console.log(Math.trunc(Math.PI)); // Output is 3
-    
+
     ||| Round
     console.log(Math.round(3.4)); // Output is 3
     console.log(Math.round(3.5)); // Output is 4
@@ -179,7 +178,7 @@ Data Types:
         console.log("anyName".charAt(Math.floor(Math.random() * anyName.length)));
 
 | Conditionals : If Statements
-        
+
     || If Statements
 
         Note: Let you make decisions within your code based upon the current state of data.
@@ -220,7 +219,7 @@ Data Types:
 
     || Switch statements
         Checks an expression or value and then takes a waterfall shape to check possible cases.
-            Syntax: 
+            Syntax:
             switch (expression OR) {
                 case choice1:
                     Run this code.
@@ -269,22 +268,22 @@ Data Types:
         // Syntax
         // condition ? ifTrue : ifFalse;
         // the : is like the else
-            Example: 
+            Example:
             let testScore = 40;
             let myGrade = testScore > 89 ? "Flat A" : testScore > 79 ? "Flat B" : testScore > 69 ? "Flat C" : testScore > 59 ? "Flat D" : "Flat F";
 
 | User Input
-        || Using Pop out
-            alert()
-            confirm()
-            prompt()
+|| Using Pop out
+alert()
+confirm()
+prompt()
 
 <!-- Interactive Game -->
+
 Rock paper scissor
 
-
 | Loops
-        || While loop
+|| While loop
 
             let myNumber = 0;
             while (myNumber <50) {
@@ -292,7 +291,7 @@ Rock paper scissor
             myNumber = myNumber + 1;
             }
 
-            is the same as 
+            is the same as
 
             let myNumber = 0;
             while (myNumber <50) {
@@ -309,9 +308,8 @@ Rock paper scissor
 
         || For Loop -  best for counting and indexing
 
-
 | Functions
-        
+
         || Note: Methods is a built in functions
             example:
                 "Tag".toLocaleLowerCase();
@@ -351,16 +349,16 @@ Rock paper scissor
            console.log(getUserNameFromEmail("playerrandom@email.com")); // Output is playerrandom
 
 | Scope  
-    Tips:
-    Global = Not in a function or block. Not desirable.
-    Local = In a function or block. Not Global
-    Var = instantiates function() scoped variables
-    Let and const = intantiate block scoped variables.
+ Tips:
+Global = Not in a function or block. Not desirable.
+Local = In a function or block. Not Global
+Var = instantiates function() scoped variables
+Let and const = intantiate block scoped variables.
 
     Avoid using var. Stick with const and let.
     Use const unless you need to reassign value.
     Use let if you know you will reassign value.
-    
+
         var x = 1; // function scoped
         let y = 2; // block scoped
         const z = 3;
@@ -382,52 +380,52 @@ Rock paper scissor
         }
 
 | Array
-        // Using method to manipulate
-        .push = Add to the last.
-        .pop = remove last.
-        .unshift = adding to the beginning.
-        .shift = removing the first from the beggining.
-        .splice = used to delete or replace in the middle.
-            (start, end, insert) ex. .splice(1,0, 32)
-        .split = used to divide the string with a comma
-            ex. "How are you today?" to ["How", "are", "you", "today?"]
-        .slice = used to extract a section of a string and return it as a new string.
-            ex. let str = "Hello, World!";
-                let sliced = str.slice(7, 12);
-                output is "World"
-        .concat = used in joining two existing array
-        ... aka spread operator using 
-        [] Use bracket notation to access nested array.
+// Using method to manipulate
+.push = Add to the last.
+.pop = remove last.
+.unshift = adding to the beginning.
+.shift = removing the first from the beggining.
+.splice = used to delete or replace in the middle.
+(start, end, insert) ex. .splice(1,0, 32)
+.split = used to divide the string with a comma
+ex. "How are you today?" to ["How", "are", "you", "today?"]
+.slice = used to extract a section of a string and return it as a new string.
+ex. let str = "Hello, World!";
+let sliced = str.slice(7, 12);
+output is "World"
+.concat = used in joining two existing array
+... aka spread operator using
+[] Use bracket notation to access nested array.
 
 | Objects
-        // Inheritance
-                Need note Log here.
-        // Constructor
-                Object.create used to create a new object with inheritance
-        // Deleting
-                Need note Log here.
-        // Deconstructing
-                Need note log here.
-        For in loop is used in an object.
+// Inheritance
+Need note Log here.
+// Constructor
+Object.create used to create a new object with inheritance
+// Deleting
+Need note Log here.
+// Deconstructing
+Need note log here.
+For in loop is used in an object.
 
 | Classes = Need note Log here
-        // parent class | super class
-        // child class
-        // constructor
-        // private and public
-        // getters and setters
+// parent class | super class
+// child class
+// constructor
+// private and public
+// getters and setters
 
 | JSON
-    Used to send and recieved data not just javascript.
-    A text format that is completely language independent.
-        // Stringify = method used to format from object to JSON.
-        // Parse = method used to format from JSON to an object.
+Used to send and recieved data not just javascript.
+A text format that is completely language independent.
+// Stringify = method used to format from object to JSON.
+// Parse = method used to format from JSON to an object.
 
 | Errors and error handling
-        reference error = common error such as variable not defined.
-        syntax error = can't catch and fix.
-        type error = common error example assigning/re:assigning a variable.
-        
+reference error = common error such as variable not defined.
+syntax error = can't catch and fix.
+type error = common error example assigning/re:assigning a variable.
+
         .error method used to console a danger error
             // try
             // catch
@@ -437,18 +435,18 @@ Rock paper scissor
         .table used to console a table error that are more detailed.
 
 | DOM - Document Object Model
-        You can navigate the DOM tree with this
-        document.
-                getElementById
-                querySelector
-                getElementsByClassName
-                querySelectorAll
-                getElementsByTagName
-                parentElement
-                nextSibling
-                nextElementSibling
-                previousSibling
-                previousElementSibling
+You can navigate the DOM tree with this
+document.
+getElementById
+querySelector
+getElementsByClassName
+querySelectorAll
+getElementsByTagName
+parentElement
+nextSibling
+nextElementSibling
+previousSibling
+previousElementSibling
 
                 //Chaining
                 parentElement.children
@@ -458,16 +456,21 @@ Rock paper scissor
                 parentElement.lastElementChild
                 nextElementSibling.nextElementSibling
 
-// Event listener - Need to study
-    used to interact with the browser
-        Selecting, capturing, bubbling, propagation and delegation, target.
+// Event listener - Learned about the basic knowledge.
+Inline Events - onclick
+addEventListenet
+Event Object
+Standart vs Arrow
+
+used to interact with the browser
+Selecting, capturing, bubbling, propagation and delegation, target.
 
 // Web storage API - Need to study this further
-        // set method
-        // retrieve by using get
-        // remove item
-        // clear
-        // specify the  index position in local storage to get the key return
+// set method
+// retrieve by using get
+// remove item
+// clear
+// specify the index position in local storage to get the key return
 
 // Modules - Need to study this further
 
@@ -477,7 +480,4 @@ Rock paper scissor
 
 // Regular Expressions - Need to study this further
 
-Continue on "7:20:00"
-
 Note: Only log here the explanation, summary and atleast 1 example to trim down the note. (see main.js)
-
